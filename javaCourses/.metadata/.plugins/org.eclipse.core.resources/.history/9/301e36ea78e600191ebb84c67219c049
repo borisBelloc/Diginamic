@@ -3,7 +3,7 @@ package javaImperatif;
 public class Tp7 {
 
 	/**
-	 * Display the n prime number asked by user
+	 * Display the x prime number
 	 * 
 	 * @param args
 	 */
@@ -24,7 +24,7 @@ public class Tp7 {
 		isPrime(12);
 		
 		
-// TODO: finir tp 7
+		
 		
 	}
 
@@ -34,8 +34,8 @@ public class Tp7 {
 	/**
 	 * Is it a prime number
 	 * 
-	 * @param numberChoosen : argument to check
-	 * @return true or false
+	 * @param numberChoosen
+	 * @return
 	 */
 	public static boolean isPrime(int numberChoosen) {
 

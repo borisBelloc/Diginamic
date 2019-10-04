@@ -24,7 +24,14 @@ public class Tp7 {
 		isPrime(12);
 		
 		
-// TODO: finir tp 7
+		int tab[] = new int[5];
+		System.out.println("tabb " + tab);
+		
+		for (int i : tab) {
+			System.out.println("tabb " + tab[i]);
+			
+		}
+		
 		
 	}
 
