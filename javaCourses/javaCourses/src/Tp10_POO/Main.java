@@ -9,6 +9,8 @@ public class Main {
 		
 		Rond rond = new Rond(point, 6);
 		rond.affiche();
+		
+		
 
 	}
 
