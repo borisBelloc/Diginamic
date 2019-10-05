@@ -1,18 +1,18 @@
 package Tp10_POO;
 
 public class Rond {
-	private Point p;
-	private int r;
+	private Point centre;
+	private int rayon;
 
-	public Rond(Point p, int r) {
+	public Rond(Point centre, int rayon) {
 		super();
-		this.p = p;
-		this.r = r;
+		this.centre = centre;
+		this.rayon = rayon;
 	}
 
 	@Override
 	public String toString() {
-		return "ROND [" + p.getX() + ";" + p.getY() + "], " + r;
+		return "ROND [" + centre.getX() + ";" + centre.getY() + "], " + rayon;
 	}
 
 	public void affiche() {

@@ -1,26 +1,41 @@
 package Tp10_POO;
 
 public class Rectangle {
-	private Point p;
-	private int a;
-	private int b;
-	
-	public Rectangle(Point p, int a, int b) {
+	private Point firstPoint;
+	private int height;
+	private int witdh;
+
+	public Rectangle(Point firstPoint, int height, int witdh) {
 		super();
-		this.p = p;
-		this.a = a;
-		this.b = b;
+		this.firstPoint = firstPoint;
+		this.height = height;
+		this.witdh = witdh;
 	}
 
+	
+	public Point getPointBasGauche() {
+		return this.firstPoint;
+	}
+	
 	public Point getPointBasDroit() {
-		// TODO finir
-		return new Point (this.p.getX() + 20 + getY())
-		//return Point;
+		return new Point (this.firstPoint.getX() + witdh, this.firstPoint.getY() ); 
+	}
+	public Point getPointHautGauche() {
+		return new Point (this.firstPoint.getX(), this.firstPoint.getY() + height ); 
+	}
+
+	public Point getPointHautDroit() {
+		return new Point (this.firstPoint.getX() + witdh, this.firstPoint.getY() + height ); 
 	}
 
 
+	@Override
+	public String toString() {
+		return "[RECT " + firstPoint + getPointBasDroit() + getPointHautGauche() + getPointHautDroit() + "]";
+	}
 	
-	
-	
-	
+	public void affiche() {
+		System.out.println( toString() );
+	}
 }
+	

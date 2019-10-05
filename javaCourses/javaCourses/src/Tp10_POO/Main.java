@@ -10,8 +10,8 @@ public class Main {
 		Rond rond = new Rond(point, 6);
 		rond.affiche();
 		
-		
-
+		Rectangle rectangle = new Rectangle(point, 10, 10);
+		rectangle.affiche();
 	}
 
 }
