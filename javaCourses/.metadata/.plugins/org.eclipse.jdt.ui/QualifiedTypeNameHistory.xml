@@ -3,4 +3,9 @@
     <fullyQualifiedTypeName name="java.lang.Boolean"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="java.lang.Object"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="Tp11_POO.FigureUtil"/>
+    <fullyQualifiedTypeName name="java.awt.Rectangle"/>
+    <fullyQualifiedTypeName name="Tp10_POO.Rectangle"/>
+    <fullyQualifiedTypeName name="Tp11_POO.Rectangle"/>
 </qualifiedTypeNameHistroy>
