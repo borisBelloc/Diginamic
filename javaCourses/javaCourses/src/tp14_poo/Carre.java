@@ -1,4 +1,4 @@
-package tp13_poo;
+package tp14_poo;
 
 public class Carre extends Rectangle {
 	private Point firstPoint;
