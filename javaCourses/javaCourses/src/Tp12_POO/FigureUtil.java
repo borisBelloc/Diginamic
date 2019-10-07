@@ -9,7 +9,6 @@ public class FigureUtil {
 		// so add 1 to make it inclusive
 		// sauce: https://stackoverflow.com/a/363692/9552861
 		int randomInt = ThreadLocalRandom.current().nextInt(0, 50 + 1);
-//		System.out.println("random int" + randomInt);
 		return randomInt;
 	}
 	

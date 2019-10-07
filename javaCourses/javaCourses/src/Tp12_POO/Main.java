@@ -21,7 +21,6 @@ public class Main {
 		randomRectangle.affiche();
 		
 //		---------------------------------------------
-
 		
 		Point customPoint = new Point();
 		customPoint.setX(10);

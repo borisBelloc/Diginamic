@@ -38,7 +38,7 @@ public class Rectangle {
 
 	@Override
 	public String toString() {
-		return "[RECT " + firstPoint + getPointBasDroit() + getPointHautGauche() + getPointHautDroit() + "]";
+		return "##" + this.getType() + " " + firstPoint + getPointBasDroit() + getPointHautGauche() + getPointHautDroit() + "]";
 	}
 	
 	public void affiche() {
