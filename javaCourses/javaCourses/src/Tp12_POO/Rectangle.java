@@ -1,4 +1,4 @@
-package Tp11_POO;
+package Tp12_POO;
 
 public class Rectangle {
 	private Point firstPoint;
@@ -43,6 +43,10 @@ public class Rectangle {
 	
 	public void affiche() {
 		System.out.println( toString() );
+	}
+	
+	protected String getType() {
+		return this.getClass().getSimpleName();
 	}
 	
 	

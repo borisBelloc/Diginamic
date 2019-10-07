@@ -1,4 +1,4 @@
-package Tp11_POO;
+package Tp12_POO;
 
 public class Point {
 	private final int INIT_X = 25;

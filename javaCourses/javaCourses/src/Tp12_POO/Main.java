@@ -1,4 +1,4 @@
-package Tp11_POO;
+package Tp12_POO;
 
 public class Main {
 
@@ -22,15 +22,23 @@ public class Main {
 		randomRectangle.affiche();
 		
 //		---------------------------------------------
-		System.out.print("------> ");
-		Rectangle customRec = new Rectangle(point, 15, 10);
-		customRec.affiche();
+
 		
-		Point cuPoint = new Point();
-		cuPoint.setX(10);
-		cuPoint.setY(10);
-		System.out.print("---POINT--> ");
-		cuPoint.affiche();
+		Point customPoint = new Point();
+		customPoint.setX(10);
+		customPoint.setY(10);
+		System.out.print("--- custom POINT--> ");
+		customPoint.affiche();
+		
+		System.out.print("---Custom Rectangle---> ");
+		Rectangle customRectangle = new Rectangle(customPoint, 15, 10);
+		customRectangle.affiche();
+//		System.out.println(customRectangle.getType());
+		
+//-----------------------------------------------
+		System.out.print("--- Carre ---> ");
+		Carre carre = new Carre(customPoint, 10, 10);
+		carre.affiche();
 		
 	}
 
