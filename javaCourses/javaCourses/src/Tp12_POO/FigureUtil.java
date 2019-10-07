@@ -4,7 +4,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class FigureUtil {
 	
-	private int getRandomInt() {
+	private static int getRandomInt() {
 		// nextInt is normally exclusive of the top value,
 		// so add 1 to make it inclusive
 		// sauce: https://stackoverflow.com/a/363692/9552861
@@ -13,19 +13,19 @@ public class FigureUtil {
 		return randomInt;
 	}
 	
-	public Point getRandomPoint() {
+	public static Point getRandomPoint() {
 		Point randomPoint = new Point();
 		randomPoint.setX(getRandomInt());
 		randomPoint.setY(getRandomInt());
 		return randomPoint;
 	}
 	
-	public Rond getRandomRond() {
+	public static Rond getRandomRond() {
 		Rond randomRond = new Rond(getRandomPoint(), getRandomInt());
 		return randomRond;
 	}
 
-	public Rectangle getRandomRectangle() {
+	public static Rectangle getRandomRectangle() {
 		Rectangle randomRectangle = new Rectangle(getRandomPoint(), getRandomInt(), getRandomInt());
 		return randomRectangle;
 		

@@ -7,17 +7,16 @@ public class Main {
 		Point point = new Point();
 		System.out.println(point.toString());
 		
-		FigureUtil figureUtil = new FigureUtil();
-		Point randomPoint = figureUtil.getRandomPoint();
+		Point randomPoint = FigureUtil.getRandomPoint();
 		System.out.print("random Point -> ");
 		randomPoint.affiche();
 		
-		Rond randomRond = figureUtil.getRandomRond();
+		Rond randomRond = FigureUtil.getRandomRond();
 		System.out.print("random Point -> ");
 		randomRond.affiche();
 		
 		
-		Rectangle randomRectangle = figureUtil.getRandomRectangle();
+		Rectangle randomRectangle = FigureUtil.getRandomRectangle();
 		System.out.print("random Rectangle -> ");
 		randomRectangle.affiche();
 		
