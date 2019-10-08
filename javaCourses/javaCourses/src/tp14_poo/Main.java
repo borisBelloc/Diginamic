@@ -12,9 +12,8 @@ public class Main {
 		randomPoint.affiche();
 		
 		Rond randomRond = FigureUtil.getRandomRond();
-		System.out.print("random Point -> ");
+		System.out.print("random Rond -> ");
 		randomRond.affiche();
-		
 		
 		Rectangle randomRectangle = FigureUtil.getRandomRectangle();
 		System.out.print("random Rectangle -> ");
@@ -35,11 +34,10 @@ public class Main {
 		
 //-----------------------------------------------
 		System.out.print("--- Carre ---> ");
-		Carre carre = new Carre(customPoint, 10, 10);
+		Carre carre = new Carre(customPoint, 20);
 		carre.affiche();
 		
 		// TEST .equal()
-		System.out.print("--- EQUAL---\n");
 		Point a = new Point();
 		a.setX(10);
 		a.setY(10);
@@ -51,6 +49,14 @@ public class Main {
 		c.setX(10);
 		c.setY(15);
 		System.out.println(a.equals(c));
+		
+		//	RANDOM FIGURE
+		System.out.print("Random carre : ");
+		System.out.println(FigureUtil.getRandomCarre());
+		System.out.print("Random rond : ");
+		System.out.println(FigureUtil.getRandomRond());
+		System.out.print("Random Rectangle : ");
+		System.out.println(FigureUtil.getRandomRectangle());
 		
 	}
 

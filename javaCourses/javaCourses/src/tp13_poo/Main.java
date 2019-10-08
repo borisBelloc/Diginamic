@@ -12,7 +12,7 @@ public class Main {
 		randomPoint.affiche();
 		
 		Rond randomRond = FigureUtil.getRandomRond();
-		System.out.print("random Point -> ");
+		System.out.print("random Rond -> ");
 		randomRond.affiche();
 		
 		

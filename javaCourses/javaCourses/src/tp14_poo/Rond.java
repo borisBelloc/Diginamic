@@ -1,6 +1,6 @@
 package tp14_poo;
 
-public class Rond {
+public class Rond extends Figure {
 	private Point centre;
 	private int rayon;
 
@@ -12,11 +12,6 @@ public class Rond {
 
 	@Override
 	public String toString() {
-		return "ROND [" + centre.getX() + ";" + centre.getY() + "], " + rayon;
+		return "Rond [" + centre.getX() + ";" + centre.getY() + "], " + rayon;
 	}
-
-	public void affiche() {
-		System.out.println( toString() );
-	}
-
 }

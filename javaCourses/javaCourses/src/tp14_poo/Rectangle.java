@@ -1,6 +1,6 @@
 package tp14_poo;
 
-public class Rectangle {
+public class Rectangle extends Figure {
 	private Point firstPoint;
 	private int height;
 	private int witdh;
@@ -38,17 +38,9 @@ public class Rectangle {
 
 	@Override
 	public String toString() {
-		return "##" + this.getType() + " " + firstPoint + getPointBasDroit() + getPointHautGauche() + getPointHautDroit() + "]";
+		return this.getType() + " " + firstPoint + getPointBasDroit() + getPointHautGauche() + getPointHautDroit() + "]";
 	}
-	
-	public void affiche() {
-		System.out.println( toString() );
-	}
-	
-	protected String getType() {
-		return this.getClass().getSimpleName();
-	}
-	
+
 	
 }
 	

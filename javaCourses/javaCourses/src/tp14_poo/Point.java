@@ -37,16 +37,6 @@ public class Point {
 		System.out.println( toString() );
 	}
 
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + INIT_X;
-		result = prime * result + INIT_Y;
-		result = prime * result + x;
-		result = prime * result + y;
-		return result;
-	}
 
 	@Override
 	public boolean equals(Object obj) {
