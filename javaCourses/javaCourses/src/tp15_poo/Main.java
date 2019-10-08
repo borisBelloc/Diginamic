@@ -14,28 +14,32 @@ public class Main {
 		Rond randomRond = FigureUtil.getRandomRond();
 		System.out.print("random Rond -> ");
 		randomRond.affiche();
-		
+				
 		Rectangle randomRectangle = FigureUtil.getRandomRectangle();
 		System.out.print("random Rectangle -> ");
 		randomRectangle.affiche();
+
+		Carre randomCarre = FigureUtil.getRandomCarre();
+		System.out.print("random Carre -> ");
+		randomCarre.affiche();
 		
-//		---------------------------------------------
+		System.out.println("-------------------");
 		
 		Point customPoint = new Point();
 		customPoint.setX(10);
 		customPoint.setY(10);
-		System.out.print("--- custom POINT--> ");
+		System.out.print("Custom POINT--> ");
 		customPoint.affiche();
 		
-		System.out.print("---Custom Rectangle---> ");
+		System.out.print("Custom Rectangle--> ");
 		Rectangle customRectangle = new Rectangle(customPoint, 15, 10);
 		customRectangle.affiche();
-//		System.out.println(customRectangle.getType());
 		
-//-----------------------------------------------
-		System.out.print("--- Carre ---> ");
+		System.out.print("Custom Carre--> ");
 		Carre carre = new Carre(customPoint, 20);
 		carre.affiche();
+
+		System.out.println("-------------------");
 		
 		// TEST .equal()
 		Point a = new Point();
@@ -59,6 +63,28 @@ public class Main {
 		System.out.println(FigureUtil.getRandomRectangle());
 		System.out.print("Random figure ------> ");
 		System.out.println(Figure.getRandomFigure());
+		
+		// Segment
+		Segment segment = new Segment(point, 10, true);
+		segment.affiche();
+		//	RANDOM SEGMENT
+		System.out.print("Random segment : ");
+		System.out.println(FigureUtil.getRandomSegment());
+		
+		
+		// SURFACE
+		System.out.println("Surface rond : " + randomRond.surface());
+		System.out.println("Surface carre : " + randomCarre.surface() );
+		System.out.println("Surface rectangle : " + randomRectangle.surface());
+		
+		System.out.println("-------------------");
+		
+		// Random surfacable
+		Figure randomFigure = FigureUtil.getRandomSurfacable();
+		randomFigure.affiche();
+		
+
+
 		
 	}
 

@@ -17,13 +17,15 @@ public abstract class Figure {
 	}
 	
 	public static Figure getRandomFigure() {
-		switch (FigureUtil.getRandomInt(1, 3)) {
+		switch (FigureUtil.getRandomInt(1, 4)) {
 		case 1:
 			return FigureUtil.getRandomCarre();
 		case 2: 
 			return FigureUtil.getRandomRectangle();
 		case 3: 
 			return FigureUtil.getRandomRond();
+		case 4: 
+			return FigureUtil.getRandomSegment();
 		default:
 			return null;
 		}

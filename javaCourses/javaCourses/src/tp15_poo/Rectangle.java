@@ -1,6 +1,6 @@
 package tp15_poo;
 
-public class Rectangle extends Figure {
+public class Rectangle extends Figure implements Surfaceable {
 	private Point firstPoint;
 	private int height;
 	private int witdh;
@@ -39,6 +39,11 @@ public class Rectangle extends Figure {
 	@Override
 	public String toString() {
 		return this.getType() + " " + firstPoint + getPointBasDroit() + getPointHautGauche() + getPointHautDroit() + "]";
+	}
+
+	@Override
+	public double surface() {
+		return (this.height * this.witdh);
 	}
 
 	

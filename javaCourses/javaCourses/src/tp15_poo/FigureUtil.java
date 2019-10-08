@@ -1,5 +1,6 @@
 package tp15_poo;
 
+import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class FigureUtil {
@@ -41,7 +42,25 @@ public class FigureUtil {
 		Carre randomCarre = new Carre(getRandomPoint(), getRandomInt());
 		return randomCarre;
 	}
+
+	public static Figure getRandomSegment() {
+		Random randomBool = new Random();
+		Segment randomSegment = new Segment(getRandomPoint(), getRandomInt(), randomBool.nextBoolean());
+		return randomSegment;
+	}
 	
+	public static Figure getRandomSurfacable() {
+		switch (FigureUtil.getRandomInt(1, 3)) {
+		case 1:
+			return FigureUtil.getRandomCarre();
+		case 2: 
+			return FigureUtil.getRandomRectangle();
+		case 3: 
+			return FigureUtil.getRandomRond();
+		default:
+			return null;
+		}
+	}
 
 
 
