@@ -57,6 +57,8 @@ public class Main {
 		System.out.println(FigureUtil.getRandomRond());
 		System.out.print("Random Rectangle : ");
 		System.out.println(FigureUtil.getRandomRectangle());
+		System.out.print("Random figure ------> ");
+		System.out.println(Figure.getRandomFigure());
 		
 	}
 
