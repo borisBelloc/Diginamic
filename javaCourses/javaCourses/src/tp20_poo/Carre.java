@@ -1,13 +1,13 @@
 package tp20_poo;
 
 public class Carre extends Rectangle implements Surfaceable {
-	private Point firstPoint;
+	private Point pointBasGauche;
 	private int height;
 	private int witdh;
 	
-	public Carre(Point firstPoint, int length) {
-		super(firstPoint, length, length);
-		this.firstPoint = firstPoint;
+	public Carre(Point pointBasGauche, int length) {
+		super(pointBasGauche, length, length);
+		this.pointBasGauche = pointBasGauche;
 		this.height = length;
 		this.witdh = length;
 	}

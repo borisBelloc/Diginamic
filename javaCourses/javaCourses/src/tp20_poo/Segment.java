@@ -5,17 +5,15 @@ public class Segment extends Figure {
 	private int lenght;
 	private boolean isHorizontal;
 	
+	private Point secondPoint;
+	
 	public Segment(Point firstPoint, int lenght, boolean isHorizontal) {
 		super();
 		this.firstPoint = firstPoint;
 		this.lenght = lenght;
 		this.isHorizontal = isHorizontal;
-	}
-	public Point getFirstPoint() {
-		return this.firstPoint;
-	}
-	public Point getSecondPoint() {
-		Point secondPoint = new Point();
+		
+		this.secondPoint = new Point();
 		if (isHorizontal) {
 			secondPoint.setX(firstPoint.getX() + lenght);
 			secondPoint.setY(firstPoint.getY());
@@ -23,6 +21,11 @@ public class Segment extends Figure {
 			secondPoint.setX(firstPoint.getX());
 			secondPoint.setY(firstPoint.getY() + lenght);
 		}
+	}
+	public Point getFirstPoint() {
+		return this.firstPoint;
+	}
+	public Point getSecondPoint() {
 		return secondPoint; 
 	}
 	

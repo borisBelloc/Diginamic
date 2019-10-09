@@ -1,50 +1,68 @@
 package tp20_poo;
 
 public class Rectangle extends Figure implements Surfaceable {
-	private Point firstPoint;
+	private Point pointBasGauche; // Point Bas Gauche
 	private int height;
 	private int witdh;
+	
+	private Point pointBasDroit;
+	private Point pointHautGauche;
+	private Point pointHautDroit;
+	
 
-	public Rectangle(Point firstPoint, int height, int witdh) {
+	/** 
+	 * pointBasGauche is firstPoint
+	 * */
+	public Rectangle(Point pointBasGauche, int height, int witdh) {
 		super();
-		this.firstPoint = firstPoint;
+		this.pointBasGauche = pointBasGauche;
 		this.height = height;
 		this.witdh = witdh;
+		
+		this.pointBasDroit = new Point();
+		pointBasDroit.setX(pointBasGauche.getX() + witdh);
+		pointBasDroit.setY(pointBasGauche.getY());
+		
+		this.pointHautGauche = new Point();
+		pointHautGauche.setX(pointBasGauche.getX());
+		pointHautGauche.setY(pointBasGauche.getY() + height);
+		
+		this.pointHautDroit = new Point();
+		pointHautDroit.setX(pointBasGauche.getX() + witdh);
+		pointHautDroit.setY(pointBasGauche.getY() + height);
 	}
 
 	
 	public Point getPointBasGauche() {
-		return this.firstPoint;
+		return this.pointBasGauche;
 	}
 	public Point getPointBasDroit() {
-		Point pointBasDroit = new Point();
-		pointBasDroit.setX(firstPoint.getX() + witdh);
-		pointBasDroit.setY(firstPoint.getY());
-		return pointBasDroit; 
+		return this.pointBasDroit; 
 	}
 	public Point getPointHautGauche() {
-		Point pointHautGauche = new Point();
-		pointHautGauche.setX(firstPoint.getX());
-		pointHautGauche.setY(firstPoint.getY() + height);
-		return pointHautGauche; 
+		return this.pointHautGauche; 
 	}
 	public Point getPointHautDroit() {
-		Point pointHautDroit = new Point();
-		pointHautDroit.setX(firstPoint.getX() + witdh);
-		pointHautDroit.setY(firstPoint.getY() + height);
-		return pointHautDroit; 
+		return this.pointHautDroit; 
 	}
 
 
 	@Override
 	public String toString() {
-		return this.getType() + " " + firstPoint + getPointBasDroit() + getPointHautGauche() + getPointHautDroit() + "]";
+		return this.getType() + " " + getPointBasGauche() + getPointBasDroit() + getPointHautGauche() + getPointHautDroit() + "]";
 	}
 
 	@Override
 	public double surface() {
 		return (this.height * this.witdh);
 	}
+
+
+//	@Override
+//	public Point[] getPOints() {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
 
 	
 }
