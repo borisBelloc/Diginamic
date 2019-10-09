@@ -78,7 +78,7 @@ public class Main {
 
 		System.out.println("-------------------");
 
-		// Random surfacable
+		// Random surfaceable
 		Figure randomFigure = FigureUtil.getRandomSurfacable();
 		randomFigure.affiche();
 		System.out.println("-------------------");
@@ -92,8 +92,15 @@ public class Main {
 		int tailleRon = randomRond.getPoints().length;
 		System.out.print(tailleRon);
 		int tailleSeg = segment.getPoints().length;
-		System.out.print(tailleSeg);
+		System.out.println(tailleSeg);
+		System.out.println("-------------------");
 		
+//		FigureUtil.getPoints()
+		Figure[] fig = {Figure.getRandomFigure()};
+		fig[0].affiche();
+		System.out.println(fig[0].getType());
+		System.out.println("-AAAA--");
+		FigureUtil.getPoints(fig);
 
 	}
 
