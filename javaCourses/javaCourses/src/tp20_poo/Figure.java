@@ -3,7 +3,7 @@ package tp20_poo;
 public abstract class Figure {
 
 	public abstract String toString();
-//	public abstract Point[] getPOints();
+	public abstract Point[] getPoints();
 	
 	public void affiche() {
 		System.out.println( toString() );

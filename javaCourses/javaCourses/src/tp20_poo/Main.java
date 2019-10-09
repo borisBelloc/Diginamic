@@ -81,6 +81,19 @@ public class Main {
 		// Random surfacable
 		Figure randomFigure = FigureUtil.getRandomSurfacable();
 		randomFigure.affiche();
+		System.out.println("-------------------");
+		
+		
+		// Count Point
+		int tailleRec = randomRectangle.getPoints().length;
+		System.out.print(tailleRec);
+		int tailleCar = randomCarre.getPoints().length;
+		System.out.print(tailleCar);
+		int tailleRon = randomRond.getPoints().length;
+		System.out.print(tailleRon);
+		int tailleSeg = segment.getPoints().length;
+		System.out.print(tailleSeg);
+		
 
 	}
 

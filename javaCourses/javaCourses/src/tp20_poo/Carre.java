@@ -16,5 +16,11 @@ public class Carre extends Rectangle implements Surfaceable {
 	public double surface() {
 		return (this.height * this.witdh);
 	}
+	
+	@Override
+	public Point[] getPoints() {
+		Point[] pointList = { this.getPointBasGauche(), this.getPointBasDroit(), this.getPointHautGauche(), this.getPointHautDroit() };
+		return pointList;
+	}
 
 }

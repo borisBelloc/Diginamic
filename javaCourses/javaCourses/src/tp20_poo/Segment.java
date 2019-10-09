@@ -29,11 +29,16 @@ public class Segment extends Figure {
 		return secondPoint; 
 	}
 	
-//	@Override
+	@Override
 	public String toString() {
 		return this.getType() + this.getFirstPoint() + this.getSecondPoint() + " || isHorizontal ? " + this.isHorizontal ;
 	}
 
+	@Override
+	public Point[] getPoints() {
+		Point[] pointList = { this.getFirstPoint(), this.getSecondPoint() };
+		return pointList;
+	}
 	
 	
 }

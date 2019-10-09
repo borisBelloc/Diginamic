@@ -31,7 +31,6 @@ public class Rectangle extends Figure implements Surfaceable {
 		pointHautDroit.setX(pointBasGauche.getX() + witdh);
 		pointHautDroit.setY(pointBasGauche.getY() + height);
 	}
-
 	
 	public Point getPointBasGauche() {
 		return this.pointBasGauche;
@@ -46,7 +45,6 @@ public class Rectangle extends Figure implements Surfaceable {
 		return this.pointHautDroit; 
 	}
 
-
 	@Override
 	public String toString() {
 		return this.getType() + " " + getPointBasGauche() + getPointBasDroit() + getPointHautGauche() + getPointHautDroit() + "]";
@@ -57,12 +55,11 @@ public class Rectangle extends Figure implements Surfaceable {
 		return (this.height * this.witdh);
 	}
 
-
-//	@Override
-//	public Point[] getPOints() {
-//		// TODO Auto-generated method stub
-//		return null;
-//	}
+	@Override
+	public Point[] getPoints() {
+		Point[] pointList = { this.getPointBasGauche(), this.getPointBasDroit(), this.getPointHautGauche(), this.getPointHautDroit() };
+		return pointList;
+	}
 
 	
 }

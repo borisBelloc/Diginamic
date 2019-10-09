@@ -10,6 +10,15 @@ public class Rond extends Figure implements Surfaceable {
 		this.rayon = rayon;
 	}
 
+	public Point getCentre() {
+		return centre;
+	}
+	public int getRayon() {
+		return rayon;
+	}
+
+
+
 	@Override
 	public String toString() {
 		return "Rond [" + centre.getX() + ";" + centre.getY() + "], " + rayon;
@@ -18,5 +27,11 @@ public class Rond extends Figure implements Surfaceable {
 	@Override
 	public double surface() {
 		return (this.rayon * this.rayon) * Math.PI;
+	}
+	
+	@Override
+	public Point[] getPoints() {
+		Point[] pointList = { this.getCentre() };
+		return pointList;
 	}
 }
