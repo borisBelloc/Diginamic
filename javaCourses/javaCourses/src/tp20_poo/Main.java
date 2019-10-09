@@ -96,10 +96,11 @@ public class Main {
 		System.out.println("-------------------");
 		
 //		FigureUtil.getPoints()
-		Figure[] fig = {Figure.getRandomFigure()};
+		Figure[] fig = {Figure.getRandomFigure(), Figure.getRandomFigure()};
 		fig[0].affiche();
-		System.out.println(fig[0].getType());
-		System.out.println("-AAAA--");
+		fig[1].affiche();
+//		System.out.println(fig[0].getType());
+		
 		FigureUtil.getPoints(fig);
 
 	}
