@@ -97,8 +97,8 @@ public class Main {
 		
 //		FigureUtil.getPoints()
 		Figure[] fig = {Figure.getRandomFigure(), Figure.getRandomFigure()};
-		fig[0].affiche();
-		fig[1].affiche();
+//		fig[0].affiche();
+//		fig[1].affiche();
 //		System.out.println(fig[0].getType());
 		
 		FigureUtil.getPoints(fig);

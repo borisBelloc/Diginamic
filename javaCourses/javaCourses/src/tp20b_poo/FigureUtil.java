@@ -58,27 +58,27 @@ public class FigureUtil {
 		}
 	}
 
-	public static Point[] getPoints(Figure[] figure) {
+	public static Point[] getPoints(Figure... figures) {
 		int nbPointsTotal = 0;
 		Point[] listPoint;
 		Point[] pointTemp;
 
 		// Count Point number to create array
-		for (int i = 0; i < figure.length; i++) {
-			nbPointsTotal += figure[i].getPoints().length;
+		for (Figure figure : figures) {
+			nbPointsTotal += figure.getPoints().length;
 		}
+
 		listPoint = new Point[nbPointsTotal];
-		System.out.println("Nombre de points---> " + listPoint.length);
+//		System.out.println("Nombre de points---> " + listPoint.length);
 
 //		--------------------
 		// pointCounter -> Compte le nombre de point placé afin de remplir le nouveau tableau
 		int pointCounter = 0;
-		for (int i = 0; i < figure.length; i++) {
+		for (int i = 0; i < figures.length; i++) {
 
-			pointTemp = figure[i].getPoints();
+			pointTemp = figures[i].getPoints();
 
 			for (int j = 0; j < pointTemp.length; j++) {
-//				System.out.println("point temps" + pointTemp[j]);
 				listPoint[pointCounter++] = pointTemp[j];
 			}
 		}
