@@ -102,7 +102,12 @@ public class Main {
 //		System.out.println(fig[0].getType());
 		
 		FigureUtil.getPoints(fig);
+		System.out.println("-------------------");
 
+		// genere random figure inside picture
+		System.out.println(FigureUtil.genere(5));
+		
+		
 	}
 
 }

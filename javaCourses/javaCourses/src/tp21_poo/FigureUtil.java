@@ -1,15 +1,16 @@
 package tp21_poo;
 
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class FigureUtil {
 
 	/**
-	 * if getRandomInt() got no argument -> 0, 50 by default
+	 * if getRandomInt() got no argument -> 0, 99 by default
 	 */
 	private static int getRandomInt() {
-		return getRandomInt(0, 50);
+		return getRandomInt(0, 99);
 	}
 
 	public static int getRandomInt(int vMin, int vMax) {
@@ -88,6 +89,14 @@ public class FigureUtil {
 			System.out.println("Slot " + k + " : " + listPoint[k]);
 		}
 		return listPoint;
+	}
+	
+	public static ArrayList<Figure> genere(int nombreFigure) {
+		ArrayList<Figure> randomFigures = new ArrayList<Figure>();
+		for (int i = 0; i < nombreFigure; i++) {
+			randomFigures.add(getRandomSurfacable());
+		}
+		return randomFigures;
 	}
 
 }
