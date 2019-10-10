@@ -1,4 +1,4 @@
-package tp20_poo;
+package tp20b_poo;
 
 public interface Surfaceable {
 	

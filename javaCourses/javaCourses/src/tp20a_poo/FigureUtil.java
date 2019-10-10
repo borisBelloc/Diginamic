@@ -1,4 +1,4 @@
-package tp20_poo;
+package tp20a_poo;
 
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
@@ -85,7 +85,7 @@ public class FigureUtil {
 
 		System.out.println("** affichage du tableau de point***");
 		for (int k = 0; k < listPoint.length; k++) {
-			System.out.println("kkk " + listPoint[k]);
+			System.out.println("Slot " + k + " : " + listPoint[k]);
 		}
 		return listPoint;
 	}

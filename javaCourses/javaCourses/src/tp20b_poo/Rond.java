@@ -1,4 +1,4 @@
-package tp20_poo;
+package tp20b_poo;
 
 public class Rond extends Figure implements Surfaceable {
 	private Point centre;

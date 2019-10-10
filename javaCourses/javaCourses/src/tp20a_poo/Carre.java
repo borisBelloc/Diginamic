@@ -1,4 +1,4 @@
-package tp20_poo;
+package tp20a_poo;
 
 public class Carre extends Rectangle implements Surfaceable {
 	private Point pointBasGauche;

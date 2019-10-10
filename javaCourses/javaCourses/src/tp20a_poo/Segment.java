@@ -1,4 +1,4 @@
-package tp20_poo;
+package tp20a_poo;
 
 public class Segment extends Figure {
 	private Point firstPoint;
