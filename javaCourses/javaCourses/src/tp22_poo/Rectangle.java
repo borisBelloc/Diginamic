@@ -61,6 +61,25 @@ public class Rectangle extends Figure implements Surfaceable {
 		return pointList;
 	}
 
-	
+	@Override
+	public boolean couvre(Point pointToCheck) {
+		
+		Point[] myPoints = this.getPoints(); 
+		
+		for (Point point : myPoints) {
+//			if ( (pointToCheck.getX() > point.getX()) && (pointToCheck.getY() > point.getY()) ) {
+			System.out.println("FFFFFFFFF" + point);
+				
+			System.out.println(point.getX());
+				
+			}
+		
+//		pointToCheck.getX();
+//		pointToCheck.getY();
+		
+		
+		
+		return false;
+	}
+
 }
-	

@@ -5,6 +5,8 @@ public abstract class Figure {
 	public abstract String toString();
 	public abstract Point[] getPoints();
 	
+	public abstract boolean couvre(Point point);
+	
 	public void affiche() {
 		System.out.println( toString() );
 	}
@@ -27,6 +29,7 @@ public abstract class Figure {
 			return null;
 		}
 	}
+		
 	
 	
 }

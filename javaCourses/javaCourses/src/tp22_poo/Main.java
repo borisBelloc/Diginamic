@@ -107,6 +107,7 @@ public class Main {
 		// genere random figure inside picture
 		System.out.println(FigureUtil.genere(5));
 		
+		System.out.println(randomRectangle.couvre(point));
 		
 	}
 
