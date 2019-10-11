@@ -23,6 +23,15 @@ public class Main {
 		 
 		 partiesWithFemale.forEach(System.out::println);
 		 
+		 System.out.println("-----------------------");
+		 // TODO: recuperer les 10premiers caractres du nom des party contenant au moins 3 personnes.
+		 
+		 List<String> debutNom = parties.stream()
+				 .filter(party -> party.getMembers().size() >= 3)
+				 .map(party -> party.getName().substring(0, 10))
+				 .collect(Collectors.toList());
+		 debutNom.forEach(System.out::println);
+		 
 		 // TODO: récuperer une liste des personnages dont la gentillesse n'est pas en 
 		 // accord avec leur race
 		 
