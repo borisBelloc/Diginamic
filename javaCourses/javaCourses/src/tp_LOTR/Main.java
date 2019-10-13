@@ -46,7 +46,7 @@ public class Main {
 		
 		List<Character> tallCharacters = parties.stream()
 				.flatMap(party -> party.getMembers().stream()
-									.filter(character -> character.getHeight() > character.getRace().getAverageHeight())
+				.filter(character -> character.getHeight() > character.getRace().getAverageHeight())
 						)
 				.collect(Collectors.toList());
 		tallCharacters.forEach(System.out::println);
