@@ -22,7 +22,7 @@ public class Main {
 		partiesWithFemale.forEach(System.out::println);
 
 		System.out.println("-----------------------");
-		// TODO: recuperer les 10premiers caractres du nom des party contenant au moins
+		// TODO: recuperer les 10premiers caracteres du nom des parties contenant au moins
 		// 3 personnes.
 
 		System.out.println("#2");
@@ -56,11 +56,41 @@ public class Main {
 
 		List<Party> partiesWithTraitors = parties.stream()
 				.filter(party -> party.getMembers().stream()
-						.anyMatch(character -> character.isGood() != character.getRace().isGood()))
+						.anyMatch(character -> character.isGood() != character.getRace().isGood())
+						)
 				.collect(Collectors.toList());
 		partiesWithTraitors.forEach(System.out::println);
 		System.out.println();
-
+		
+		// --------------
+		//TODO: tous les persos Male
+		System.out.println("-----------------------");
+		System.out.println("#6");
+		
+		List<String> onlyMale = parties.stream()
+				.flatMap(x -> x.getMembers().stream()
+						.filter(y -> y.getGender().equals(Gender.MALE))
+						// map pour avoir des String
+						.map(z -> z.getName())
+						)
+				.collect(Collectors.toList());
+		
+		onlyMale.forEach(System.out::println);
+		
+		//TODO: tous les persos qui mesure 110
+		System.out.println("-----------------------");
+		System.out.println("#7");
+		
+		List<Character> sansDix = parties.stream()
+				.flatMap( sD -> sD.getMembers().stream()
+						.filter( sDix -> sDix.getHeight() == 110 )
+						)
+				.collect(Collectors.toList())
+				;
+		sansDix.forEach(System.out::println);
+		
+		
+	
 	}
 
 	private static List<Party> initialize() {
