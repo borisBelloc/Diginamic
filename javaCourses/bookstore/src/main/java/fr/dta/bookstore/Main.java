@@ -10,7 +10,10 @@ public class Main {
 			
 //			BookstoreDB.CreateBookstoreDB();
 //			BookstoreDB.bookstoreDBAddBooks();
-			BookstoreDB.bookstoreDBAddClients();
+//			BookstoreDB.bookstoreDBAddClients();
+			
+//			BookstoreDB_addOne.addOneBook("Manu le nouveau Napoleon", "Bush fils");
+			BookstoreDB_addOne.addOneBook("Alexander");
 			
 			
 			

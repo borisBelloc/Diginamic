@@ -30,8 +30,8 @@ public class BookstoreDB {
 					+ "firstname varchar(50) NOT NULL, " + "gender varchar(50) NOT NULL, "
 					+ "favoriteBook varchar(250))");
 
-			stmt.executeUpdate("CREATE TABLE achat(id bigserial PRIMARY KEY, " + "id_client int NOT NULL , "
-					+ "id_book int NOT NULL , " + "foreign key(id_client) REFERENCES client(id), "
+			stmt.executeUpdate("CREATE TABLE achat(id bigserial PRIMARY KEY, " + "id_client bigint NOT NULL , "
+					+ "id_book bigint NOT NULL , " + "foreign key(id_client) REFERENCES client(id), "
 					+ "foreign key(id_book) REFERENCES book(id))");
 
 			System.out.println("Done");
@@ -46,8 +46,6 @@ public class BookstoreDB {
 	
 	
 	public static void bookstoreDBAddBooks() throws SQLException {
-		//Book... books
-		
 		
 		String url = "jdbc:postgresql://localhost:5432/bookstore";
 
@@ -113,4 +111,6 @@ public class BookstoreDB {
 
 	}
 
+	
+	
 }
