@@ -7,7 +7,15 @@ public class Main {
 	public static void main(String[] args) {
 		
 		try {
-			BookstoreDB.CreateBookstoreDB();
+			
+//			BookstoreDB.CreateBookstoreDB();
+//			BookstoreDB.bookstoreDBAddBooks();
+			BookstoreDB.bookstoreDBAddClients();
+			
+			
+			
+			
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
