@@ -6,10 +6,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class BookstoreDB {
-	
-	public BookstoreDB() {
-		
-	}
 
 	public static void CreateBookstoreDB() throws SQLException {
 
@@ -20,16 +16,28 @@ public class BookstoreDB {
 
 			System.out.println("Début");
 
+			stmt.executeUpdate("DROP TABLE IF EXISTS achat;");
 			stmt.executeUpdate("DROP TABLE IF EXISTS book;");
+			stmt.executeUpdate("DROP TABLE IF EXISTS client;");
+			
 			stmt.executeUpdate("CREATE TABLE book(id bigserial PRIMARY KEY, " +
 			       "title varchar(255) NOT NULL, " +
-			       "author varchar(255))");
+			       "author varchar(255))"
+			       );
 			
-			stmt.executeUpdate("DROP TABLE IF EXISTS client;");
-			stmt.executeUpdate("CREATE TABLE cliend(id bigserial PRIMARY KEY, " +
+			stmt.executeUpdate("CREATE TABLE client(id bigserial PRIMARY KEY, " +
 				       "lastname varchar(50) NOT NULL, " +
 				       "firstname varchar(50) NOT NULL, " +
-				       "gender varchar(50) NOT NULL)");
+				       "gender varchar(50) NOT NULL, " +
+				       "favoriteBook varchar(250))");
+
+			stmt.executeUpdate("CREATE TABLE achat(id bigserial PRIMARY KEY, " +
+						"id_client int NOT NULL , " + 
+						"id_book int NOT NULL , " + 
+						"foreign key(id_client) REFERENCES client(id), " + 
+						"foreign key(id_book) REFERENCES book(id))"); 
+
+			
 			
 			System.out.println("Done");
 			
