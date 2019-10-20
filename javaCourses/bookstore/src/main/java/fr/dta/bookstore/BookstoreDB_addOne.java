@@ -12,12 +12,13 @@ import java.util.List;
 public class BookstoreDB_addOne {
 
 	/**
-	 * @DEPRECADED Add one book, only title
-	 * @param title
+	 * Add only one book
+	 * 
+	 * @param Book
 	 * @throws SQLException
 	 */
-	@Deprecated
-	public static void addOneBook(String title) throws SQLException {
+
+	public static void addOneBook(Book book) throws SQLException {
 
 		String url = "jdbc:postgresql://localhost:5432/bookstore";
 
@@ -25,15 +26,21 @@ public class BookstoreDB_addOne {
 
 			System.out.println("Début ->");
 
-			PreparedStatement stmt = conn.prepareStatement("INSERT INTO book(title) VALUES(?)");
+			PreparedStatement stmt = conn.prepareStatement("INSERT INTO book(title, author) VALUES(?, ?)",
+					Statement.RETURN_GENERATED_KEYS);
 
-			List<Book> books = new ArrayList<>();
-			books.add(new Book(title));
+			ResultSet generatedKeys;
 
-			for (Book book : books) {
-				stmt.setString(1, book.getTitle());
-				stmt.executeUpdate();
-			}
+			stmt.setString(1, book.getTitle());
+			stmt.setString(2, book.getAuthor());
+
+			stmt.executeUpdate();
+
+			generatedKeys = stmt.getGeneratedKeys();
+			generatedKeys.next();
+
+			book.setId(generatedKeys.getLong("id"));
+
 			stmt.close();
 			conn.close();
 
@@ -46,39 +53,36 @@ public class BookstoreDB_addOne {
 	}
 
 	/**
-	 * Add one book, full parameters
+	 * Add 0, n book
 	 * 
-	 * @param title
-	 * @param author
+	 * @param list of Books
 	 * @throws SQLException
 	 */
-	public static void addBook(Book... listBook ) throws SQLException {
+	public static void addBook(Book... listBook) throws SQLException {
 
 		String url = "jdbc:postgresql://localhost:5432/bookstore";
-		
-		
+
 		try (Connection conn = DriverManager.getConnection(url, "postgres", "afpa1234")) {
 
 			System.out.println("Début ->");
 
-			PreparedStatement stmt = conn.prepareStatement("INSERT INTO book(title, author) VALUES(?, ?)"
-					, Statement.RETURN_GENERATED_KEYS);
-			
+			PreparedStatement stmt = conn.prepareStatement("INSERT INTO book(title, author) VALUES(?, ?)",
+					Statement.RETURN_GENERATED_KEYS);
+
 			ResultSet generatedKeys;
 
-			
 			for (Book book : listBook) {
 				stmt.setString(1, book.getTitle());
 				stmt.setString(2, book.getAuthor());
-				
+
 				stmt.executeUpdate();
-				
+
 				generatedKeys = stmt.getGeneratedKeys();
 				generatedKeys.next();
-				
+
 				book.setId(generatedKeys.getLong("id"));
 			}
-			
+
 			stmt.close();
 			conn.close();
 
@@ -91,9 +95,9 @@ public class BookstoreDB_addOne {
 	}
 
 	public static void addFavorite(Long id_client, Long id_book) {
-		
+
 //		TODO Finir
-		
+
 //		String url = "jdbc:postgresql://localhost:5432/bookstore";
 //
 //		try (Connection conn = DriverManager.getConnection(url, "postgres", "afpa1234")) {
