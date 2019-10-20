@@ -7,7 +7,7 @@ public class DatabaseHelper {
 //	
 //	FICHIER PAS UTILISEE
 //  EXEMPLE DE FICHIER POUR UTILISER LA CONNECTION DANS FICHIER EXTERNE
-//	
+//	voir .rar jdbc-sample-master : correction formateur google drive 
 
 	static String url = "jdbc:postgresql://localhost:5432/bookstore";
 
