@@ -1,8 +1,6 @@
 package fr.dta.bookstore;
 
 import java.sql.Connection;
-
-
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -33,6 +31,7 @@ public class DB_addOne {
 			PreparedStatement stmt = conn.prepareStatement("INSERT INTO book(title, author) VALUES(?, ?)",
 					Statement.RETURN_GENERATED_KEYS);
 
+
 			ResultSet generatedKeys;
 
 			stmt.setString(1, book.getTitle());
@@ -44,13 +43,12 @@ public class DB_addOne {
 			generatedKeys.next();
 
 			book.setId(generatedKeys.getLong("id"));
-
-			stmt.close();
+			stmt.close();
 			conn.close();
 
-			System.out.println("<- Done");
 
-		} catch (Exception e) {
+			System.out.println("<- Done");
+		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
 
@@ -107,7 +105,7 @@ public class DB_addOne {
 
 			System.out.println("Début ->");
 
-			PreparedStatement stmt = conn.prepareStatement("INSERT INTO client(id_client, id_book) VALUES(?, ?)");
+			PreparedStatement stmt = conn.prepareStatement("INSERT INTO clientt(id_client, id_book) VALUES(?, ?)");
 
 			stmt.setLong(1, id_client);
 			stmt.setLong(2, id_book);
