@@ -4,14 +4,47 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 
+import fr.dta.bookstore.models.Book;
 import fr.dta.bookstore.models.Client;
 import fr.dta.bookstore.models.Gender;
 
 public class getData {
 
+	public static Book getBook(String title) throws SQLException {
+		String url = "jdbc:postgresql://localhost:5432/bookstore";
+		try (Connection conn = DriverManager.getConnection(url, "postgres", "afpa1234")) {
+			
+			System.out.println("Début ->");
+
+			PreparedStatement stmt = conn.prepareStatement("SELECT * FROM book WHERE title = ?");
+			stmt.setString(1, title);
+			System.out.println("QUERY -> " + stmt);
+
+			ResultSet resultSet = stmt.executeQuery();
+			
+			if (resultSet.next()) {
+				Book book = new Book(resultSet.getString("title"),resultSet.getString("author"));
+				book.setId(resultSet.getLong("id"));
+				stmt.close();
+				conn.close();
+
+				System.out.println("<- Done");
+				return book;
+			}
+			stmt.close();
+			conn.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println("<- Done");
+
+		return null;
+	}
+	
+	
 	public static Client getClient(long id) throws SQLException {
 
 		String url = "jdbc:postgresql://localhost:5432/bookstore";
@@ -50,6 +83,7 @@ public class getData {
 
 				stmt.close();
 				conn.close();
+				System.out.println("<- Done");
 				return client;
 			}
 			stmt.close();
@@ -57,6 +91,7 @@ public class getData {
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
+		System.out.println("<- Done");
 		return null;
 
 //		PreparedStatement stmt = conn.prepareStatement("INSERT INTO achat(id_client, id_book) VALUES(?, ?)");

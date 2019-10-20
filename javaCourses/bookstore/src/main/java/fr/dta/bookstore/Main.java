@@ -26,9 +26,10 @@ public class Main {
 //			Book b2 = new Book("Le flashball pour les nuls", "Castaner X");
 //			DB_addOne.addBook(b1, b2);
 
-			//Obtenir client
-			System.out.println(getData.getClient(2));
-
+			// Obtenir client
+//			System.out.println(getData.getClient(2));
+			// Obtenir book
+			System.out.println(getData.getBook("Python par l'exemple"));
 			
 			
 //			DB_AddOneAchat.clientBuyBook(1L, 1L);
