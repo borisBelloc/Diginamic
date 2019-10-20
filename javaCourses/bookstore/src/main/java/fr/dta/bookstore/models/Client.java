@@ -16,14 +16,21 @@ public class Client {
 		this.gender = gender;
 	}
 
-	public Client(Long id, String lastname, String firstname, Gender gender, Book favoriteBook) {
+	public Client(String lastname, String firstname, Gender gender, Book favoriteBook) {
 		super();
-		this.id = id;
 		this.lastname = lastname;
 		this.firstname = firstname;
 		this.gender = gender;
 		this.favoriteBook = favoriteBook;
 	}
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
 	public String getLastname() {
 		return lastname;
 	}

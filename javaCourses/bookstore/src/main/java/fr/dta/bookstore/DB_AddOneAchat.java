@@ -37,7 +37,4 @@ public class DB_AddOneAchat {
 	
 	
 	
-
-	
-	
 }
