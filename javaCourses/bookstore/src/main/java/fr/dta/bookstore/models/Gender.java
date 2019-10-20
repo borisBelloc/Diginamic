@@ -1,4 +1,4 @@
-package fr.dta.bookstore;
+package fr.dta.bookstore.models;
 
 public enum Gender {
 	MALE("Male"),

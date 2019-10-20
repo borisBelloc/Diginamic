@@ -5,7 +5,9 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class BookstoreDB_AddOneAchat {
+import fr.dta.bookstore.models.*;
+
+public class DB_AddOneAchat {
 	
 	public static void clientBuyBook(Long id_client, Long id_book) throws SQLException {
 

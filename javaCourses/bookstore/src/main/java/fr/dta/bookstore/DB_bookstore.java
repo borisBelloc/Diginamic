@@ -8,7 +8,11 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BookstoreDB {
+import fr.dta.bookstore.models.*;
+
+
+
+public class DB_bookstore {
 
 	public static void CreateBookstoreDB() throws SQLException {
 
