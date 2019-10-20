@@ -28,8 +28,9 @@ public class Main {
 
 			// Obtenir client
 //			System.out.println(getData.getClient(2));
+			System.out.println(getData.getClient(2));
 			// Obtenir book
-			System.out.println(getData.getBook("Python par l'exemple"));
+//			System.out.println(getData.getBook("Python par l'exemple"));
 			
 			
 //			DB_AddOneAchat.clientBuyBook(1L, 1L);

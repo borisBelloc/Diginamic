@@ -30,7 +30,7 @@ public class getData {
 				stmt.close();
 				conn.close();
 
-				System.out.println("<- Done");
+				System.out.println("<- Done getBook()");
 				return book;
 			}
 			stmt.close();
@@ -39,7 +39,7 @@ public class getData {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println("<- Done");
+		System.out.println("<- Done getBook()");
 
 		return null;
 	}
@@ -77,13 +77,13 @@ public class getData {
 
 				Gender genderClient = Gender.valueOf(resultSet.getString("gender").toUpperCase());
 				Client client = new Client(resultSet.getString("lastname"), resultSet.getString("firstname"),
-						genderClient);
+						genderClient, getBook(resultSet.getString("favoriteBook")));
 				client.setId(id);
 				/* ,this.getBook(resultSet.getString("prefered_book"))); */
 
 				stmt.close();
 				conn.close();
-				System.out.println("<- Done");
+				System.out.println("<- Done getClient()");
 				return client;
 			}
 			stmt.close();
@@ -91,7 +91,7 @@ public class getData {
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
-		System.out.println("<- Done");
+		System.out.println("<- Done getClient()");
 		return null;
 
 //		PreparedStatement stmt = conn.prepareStatement("INSERT INTO achat(id_client, id_book) VALUES(?, ?)");
