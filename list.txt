@@ -1,0 +1,3 @@
+Bookstore : tp JPDC
+
+Bookstore2 : tp JPA : Hibernate
