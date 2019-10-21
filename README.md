@@ -5,7 +5,6 @@ Diginamic
 Folder:
 ----------
 **javaCourses :** TP from courses (youngest to oldest).
-
   ^ 
   - Bookstore2 : JPA (Hibernate)
   - Bookstore : JPDC
@@ -17,4 +16,3 @@ Folder:
   
   
 
-my-first-java-project
