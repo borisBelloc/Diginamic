@@ -5,8 +5,7 @@ Diginamic
 Folder:
 ----------
 **javaCourses :** TP from courses (youngest to oldest).
-
-  ^ 
+ 
   - Bookstore2 : JPA (Hibernate)
   - Bookstore : JPDC
   - appliweb : Maven/Spring (installation de Spring) random stuffs
@@ -17,4 +16,3 @@ Folder:
   
   
 
-my-first-java-project
