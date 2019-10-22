@@ -109,6 +109,7 @@ public class dao_vol {
 		DatabaseHelper.commitTxAndClose(em);
 		//---------------------------------------
 		// TODO: envoyer la liste de Vol dans Display pour affichage
+		Display.enteteVols();
 		for (Vol v : vols) {
 			System.out.print(v.getNumero_vol());
 			System.out.print("    ");
