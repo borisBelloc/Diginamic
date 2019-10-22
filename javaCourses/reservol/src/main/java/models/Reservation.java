@@ -15,6 +15,7 @@ public class Reservation {
 	private Long id;
 	
 	@ManyToOne
+	// Vol vol;
 	private Vol numero_vol;
 	@Column
 	private String nom_user;

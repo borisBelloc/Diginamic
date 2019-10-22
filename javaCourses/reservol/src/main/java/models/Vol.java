@@ -18,7 +18,7 @@ public class Vol {
 	private Long id;
 
 	@Column(unique = true, nullable = false)
-	private String numero_vol; // TODO: Unique 4 characteres
+	private String numero_vol;
 	@Enumerated(EnumType.STRING)
 	@Column(nullable = false)
 	private Avion avion;
@@ -31,6 +31,7 @@ public class Vol {
 	@Column(nullable = false)
 	private LocalDate date_depart;
 	
+	//vol
 	@OneToMany(mappedBy = "numero_vol")
     private List<Reservation> reservations;
  
