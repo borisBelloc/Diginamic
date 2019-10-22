@@ -8,6 +8,7 @@ import javax.persistence.ManyToOne;
 
 @Entity
 public class Reservation {
+	public static Long reservationCounter = 0L;
 	
 	@Id
 	@GeneratedValue
@@ -23,15 +24,16 @@ public class Reservation {
 	private int age_user;
 
 	@Column(unique = true, nullable = false)
-	private Long numero_resa;
+	private String numero_resa;
 
-	public Reservation(Vol numero_vol, String nom_user, String prenom_user, int age_user, Long numero_resa) {
+	public Reservation(Vol numero_vol, String nom_user, String prenom_user, int age_user, String numero_resa) {
 		super();
 		this.numero_vol = numero_vol;
 		this.nom_user = nom_user;
 		this.prenom_user = prenom_user;
 		this.age_user = age_user;
 		this.numero_resa = numero_resa;
+		Reservation.reservationCounter++;
 	}
 
 

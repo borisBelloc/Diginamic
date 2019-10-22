@@ -9,6 +9,7 @@ import dao.dao_reservation;
 import dao.dao_vol;
 import database.DatabaseHelper;
 import models.Avion;
+import models.Reservation;
 import models.Vol;
 
 
@@ -34,7 +35,14 @@ public class Main {
 		
 		dao_vol.searchVolByCities("Paris", "Montreal");
 		
-//		Reservation resa1 = dao_reservation.createReservation(vol1, Belloc, Boris, 25, getIdReservation)_
+		Reservation resa1 = dao_reservation.createReservation(vol1, "Belloc", "Boris", 25);
+		Reservation resa2 = dao_reservation.createReservation(vol1, "TRUDEAU", "Justin", 45);
+		dao.saveNewObjectToDb(resa1, resa2);
+		
+		System.out.println("--------------------------");
+		System.out.println("--------------------------");
+		
+//		Utils.isUserInputOk();
 		
 	}
 	
