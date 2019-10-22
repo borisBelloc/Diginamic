@@ -25,6 +25,15 @@ public class Reservation {
 	@Column(unique = true, nullable = false)
 	private Long numero_resa;
 
+	public Reservation(Vol numero_vol, String nom_user, String prenom_user, int age_user, Long numero_resa) {
+		super();
+		this.numero_vol = numero_vol;
+		this.nom_user = nom_user;
+		this.prenom_user = prenom_user;
+		this.age_user = age_user;
+		this.numero_resa = numero_resa;
+	}
+
 
 	
 	
