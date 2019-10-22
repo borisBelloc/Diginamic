@@ -25,10 +25,14 @@ public class Main {
 		
 		Vol vol1 = dao_vol.createVol("50545", Avion.A330, 50, "Paris", "Montpellier", LocalDate.now());
 		Vol vol2 = dao_vol.createVol("00001", Avion.A330, 50, "Paris", "Montpellier",  LocalDate.of(2020,4,24 ));
-		dao.saveNewObjectToDb(vol1, vol2);
+		Vol vol3 = dao_vol.createVol("00002", Avion.B747, 50, "Paris", "Montreal",  LocalDate.of(2019,10,23));
+		dao.saveNewObjectToDb(vol1, vol2, vol3);
 				
-		dao_vol.readVol();
+		dao_vol.searchAllVol();
 		
+		dao_vol.searchOneVol("50545");
+		
+		dao_vol.searchVolByCities("Paris", "Montreal");
 		
 //		Reservation resa1 = dao_reservation.createReservation(vol1, Belloc, Boris, 25, getIdReservation)_
 		

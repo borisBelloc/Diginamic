@@ -22,6 +22,7 @@ public class Utils {
 //    public static int checkInputRange() {
 //    	switch case x
 //    	si 0 - 3 -> ok
+    // switch case
 //    	
 //    }
 }

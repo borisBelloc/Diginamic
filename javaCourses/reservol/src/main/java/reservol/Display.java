@@ -30,6 +30,7 @@ public class Display {
 	// 2 VOLS
 	
 	public static void enteteVols( ) {
+		System.out.println("--------------------------------------------------------------");
 		System.out.println("Numéro | Type  | Place | Départ    | Arrivé       | Date");
 	}
 	
