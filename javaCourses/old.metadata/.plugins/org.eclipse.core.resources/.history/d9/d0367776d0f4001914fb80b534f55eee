@@ -1,0 +1,86 @@
+package reservol;
+
+import java.time.LocalDate;
+import java.util.Scanner;
+
+import dao.dao_vol;
+import models.Avion;
+
+public class Program {
+
+	public static void start() {
+		Display.Start();
+
+		int userChoice = Utils.isUserInputOk(1);
+
+		switch (userChoice) {
+		case 1:
+			menuVols();
+			break;
+		case 2:
+			menuResas();
+			break;
+		case 3:
+			Display.quitter();
+			break;
+
+		default:
+			System.out.println("Error Program.java line22");
+			break;
+		}
+	}
+
+	/**
+	 * 1: Création d’un vol 
+	 * 2: Liste des vols 
+	 * 3: Rechercher un avion par numéro 
+	 * 4: Rechercher un avion par ville de départ et d’arrivée
+	 */
+	public static void menuVols() {
+		Display.gestionVols();
+		int userChoice = Utils.isUserInputOk(2);
+
+		switch (userChoice) {
+		case 1:
+			System.out.println("Numéro de vol");
+			Scanner sc = new Scanner(System.in); 
+			String numVol = "";
+			do { 
+				System.out.println("Attention, le numéro de vol doit faire 4 charactères :");
+				numVol = sc.nextLine();
+			} while (numVol.length() != 4);
+			sc.close();
+			Scanner sc1 = new Scanner(System.in); 
+			System.out.println("Type d'avion :");
+			System.out.println("Les choix : A330; A340; A380; B747;");
+//			int typeAvion = sc1.nextInt();
+			Avion typeAvion = Avion.valueOf(sc1.nextLine());
+			System.out.println("typeAvion " + typeAvion);
+
+			//String numero_vol,
+			// Avion avion
+			// int nombre_place
+			// String ville_depart
+			// String ville_arrive,
+			// LocalDate date_depart
+//			dao_vol.createVol(numVol, avion, nombre_place, ville_depart, ville_arrive, date_depart)
+			break;
+		case 2:
+//			menuResas();
+			break;
+		case 3:
+//			Display.quitter();
+			break;
+		case 4:
+//			Display.quitter();
+			break;
+
+		}
+	}
+
+	public static void menuResas() {
+		Display.gestionResa();
+
+	}
+
+}

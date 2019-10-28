@@ -1,0 +1,34 @@
+package reservol;
+
+public class Display {
+
+	public static void Start() {
+		System.out.println("1: Gestion des vols");
+		System.out.println("2: Gestion des réservations");
+		System.out.println("3: Quitter");
+		System.out.println("\nEntrez votre choix : ");
+	}
+
+	public static void gestionVols() {
+		System.out.println("1: Création d’un vol");
+		System.out.println("2: Liste des vols");
+		System.out.println("3: Rechercher un avion par numéro");
+		System.out.println("4: Rechercher un avion par ville de départ et d’arrivée");
+	}
+	
+	public static void gestionResa() {
+		System.out.println("1: Créer une réservation");
+		System.out.println("2: Voir les réservations d’un vol");
+		System.out.println("3: Annuler une réservation");
+		System.out.println("4: Voir toutes les réservations d’une personne");
+	}
+	
+	public static void quitter() {
+		System.out.println("----- quit ----- '");
+	}
+	
+	public static void cleanConsole() {
+		    System.out.print("\033[H\033[2J");  
+		    System.out.flush();  
+		}
+}

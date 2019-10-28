@@ -1,0 +1,17 @@
+package javaImperatif;
+
+public class Tp5 {
+
+	public static void main(String[] args) {
+		
+		int choice = Integer.parseInt(args[0]);
+		
+		do {
+	
+		} while (choice > 0);
+		
+		
+
+	}
+
+}

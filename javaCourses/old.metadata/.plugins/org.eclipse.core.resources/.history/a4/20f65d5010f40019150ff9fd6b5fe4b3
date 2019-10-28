@@ -1,0 +1,39 @@
+package bookstore2;
+
+import javax.persistence.EntityManager;
+import javax.persistence.TypedQuery;
+
+import models.Book;
+import models.Client;
+
+public class Utils {
+	
+//	public static void buyBook( Client client, Book book ) {
+//		client.getId();
+//		book.getId();
+//		
+//		client.setAddBook(book);
+//	}
+	
+	public static void getBookFromClient() {
+		//user 1 if he has a passport
+		
+		EntityManager em = DatabaseHelper.createEntityManager();
+
+		
+		TypedQuery<Book> query = em.createQuery(
+		"select u " +
+		"from User u " +
+		"inner join u.passport " +
+		"where u.id =:id ", User.class);
+		query.setParameter("id", 1L);
+		User u = query.getSingleResult();
+		
+		DatabaseHelper.commitTxAndClose(em);
+
+		
+		
+	}
+	
+
+}

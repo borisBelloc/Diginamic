@@ -1,0 +1,16 @@
+package dao;
+
+import javax.persistence.EntityManager;
+
+import database.DatabaseHelper;
+
+public class dao {
+	
+	public static void saveNewObjectToDb(Object obj) {
+		EntityManager em = DatabaseHelper.createEntityManager();
+		em.getTransaction().begin();
+		em.persist(obj);		
+		DatabaseHelper.commitTxAndClose(em);
+	}
+
+}

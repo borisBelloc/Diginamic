@@ -1,0 +1,22 @@
+package models;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Vol {
+	@Id
+	@GeneratedValue
+	private Long id;
+    @Column(nullable = false)
+	private String ville_depart;
+
+
+
+
+	
+	
+	
+	
+	
+
+}

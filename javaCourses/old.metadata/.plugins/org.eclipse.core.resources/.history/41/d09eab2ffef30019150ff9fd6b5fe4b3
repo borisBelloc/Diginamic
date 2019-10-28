@@ -1,0 +1,20 @@
+package bookstore2;
+
+import models.Book;
+import models.Client;
+
+public class Utils {
+	
+	public static void buyBook( Client client, Book book ) {
+//		client.getId();
+//		book.getId();
+//		
+//		client.setAddBook(book);
+		
+		
+		
+	}
+	
+	
+
+}

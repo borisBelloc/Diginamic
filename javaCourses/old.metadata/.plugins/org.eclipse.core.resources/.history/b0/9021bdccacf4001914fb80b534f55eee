@@ -1,0 +1,31 @@
+package reservol;
+
+import javax.persistence.EntityManager;
+
+import database.DatabaseHelper;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		Display.Start();
+		
+		
+		// Create DB
+		EntityManager em = DatabaseHelper.createEntityManager();
+		em.getTransaction().begin();
+		
+		DatabaseHelper.commitTxAndClose(em);
+		
+
+
+		
+		System.out.println("Allo");
+		int aa =  Utils.userInputInt();
+		System.out.println(aa);
+		
+	}
+	
+	
+
+}

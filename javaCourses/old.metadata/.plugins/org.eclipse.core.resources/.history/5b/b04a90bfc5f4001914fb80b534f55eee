@@ -1,0 +1,63 @@
+package reservol;
+
+import java.util.Scanner;
+
+public class Utils {
+	
+    /**
+     * Used to collect user's input and check if it's an int
+     *
+     * @return user choice as int
+     */
+    public static int userInputInt() {
+        Scanner sc = new Scanner(System.in);
+        while (!sc.hasNextInt()) {
+            String input = sc.next();
+            System.out.printf("\"%s\" n'est pas valide ! Veuillez entrer un nombre entier.\n", input);
+        }
+//        sc.close();
+        return sc.nextInt();
+    }
+
+    /**
+     * Check if the user input is in the allowed choice range
+     *
+     * @param origin     // origin (allowed value):
+     *                   // 1 : Démarrage de l’application : 1 <= x <= 3
+     *                   // 20 : is level value ok : 1 <= x <= 100
+     *                   // 21 : is attribute value ok : 0 <= x <= 100
+     *                   // 3 : combat selection ? : 1 || 2
+     * @param userChoice : input entered by the user
+     * @return boolean
+     */
+    public boolean isUserInputOk(int origin, int userChoice) {
+        switch (origin) {
+            case 1:
+                if (userChoice > 0 && userChoice <= 3) {
+                    return true;
+                } else {
+                    return false;
+                }
+            case 20:
+                if (1 <= userChoice && userChoice <= 100) {
+                    return true;
+                } else {
+                    return false;
+                }
+            case 21:
+                if (0 <= userChoice && userChoice <= 100) {
+                    return true;
+                } else {
+                    return false;
+                }
+            case 3:
+                if (userChoice == 1 || userChoice == 2) {
+                    return true;
+                } else {
+                    return false;
+                }
+        }
+        return false;
+    }
+    
+}

@@ -1,0 +1,25 @@
+package models;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+@Entity
+public class Reservation {
+	
+	@Id
+	@GeneratedValue
+	private Long id;
+	
+	private Long numero_resa;
+	private String nom_user;
+	private String prenom_user;
+	private int age_user;
+	@ManyToOne
+	private Vol numero_vol;
+	
+	
+	
+
+}
