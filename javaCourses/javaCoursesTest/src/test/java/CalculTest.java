@@ -9,13 +9,6 @@ import fr.diginamic.javaCoursesTest.NegativeNumberException;
 
 public class CalculTest {
 
-//	@Test
-//	public void testDoAddition() {
-////		fail("Not yet implemented");
-//	assertEquals(6, Calcul.doAddition(3L, 3L));
-//	}
-	
-	
 	private static LongCalc calc;
 	
 	@BeforeClass
@@ -23,8 +16,6 @@ public class CalculTest {
 		calc = new LongCalc();
 	}
 	
-	
-
 	@Test
 	public void testDoSubstraction_WithNullA() {
 		Long result = calc.doSubstraction(null, 0L);
