@@ -18,7 +18,6 @@ public class Main {
 
 //		Program.start();
 		
-		System.out.println("aaa");
 		
 		// Menu 1 ok pour les 4 options
 		// ---------------------------
