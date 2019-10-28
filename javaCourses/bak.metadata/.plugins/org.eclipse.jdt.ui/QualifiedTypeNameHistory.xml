@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.lang.Boolean"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="java.lang.Object"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="Tp11_POO.FigureUtil"/>
+    <fullyQualifiedTypeName name="java.awt.Rectangle"/>
+    <fullyQualifiedTypeName name="Tp10_POO.Rectangle"/>
+    <fullyQualifiedTypeName name="Tp11_POO.Rectangle"/>
+    <fullyQualifiedTypeName name="fr.dta.bookstore.BookstoreDB"/>
+    <fullyQualifiedTypeName name="fr.dta.bookstore.BookstoreDB_addOne"/>
+    <fullyQualifiedTypeName name="fr.dta.bookstore.Book"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="java.sql.Statement"/>
+    <fullyQualifiedTypeName name="fr.dta.bookstore.models.Client"/>
+    <fullyQualifiedTypeName name="fr.dta.bookstore.models.Gender"/>
+    <fullyQualifiedTypeName name="java.io.ObjectInputStream.GetField"/>
+    <fullyQualifiedTypeName name="fr.dta.bookstore.getData"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSetMetaData"/>
+    <fullyQualifiedTypeName name="fr.dta.bookstore.models.Book"/>
+    <fullyQualifiedTypeName name="fr.dta.commons.utils.MyStringUtils"/>
+</qualifiedTypeNameHistroy>

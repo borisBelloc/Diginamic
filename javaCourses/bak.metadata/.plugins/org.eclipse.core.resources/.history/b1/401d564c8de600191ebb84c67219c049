@@ -1,0 +1,13 @@
+package javaImperatif;
+
+public class BubbleSort {
+
+	public static void main(String[] args) {
+		
+		int tab[] = { 51, 4, 20, 3 }
+
+
+
+	}
+
+}

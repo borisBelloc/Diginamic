@@ -24,8 +24,6 @@ public class MyUtils {
 		
 		// doc stream : https://www.baeldung.com/java-stream-sum
 		
-		
-		
 		// Version en stream
 		Integer total = list.stream().filter(i -> i != null)
 				.mapToInt(Integer::intValue).sum();
