@@ -1,0 +1,6 @@
+201  [main] DEBUG javaCoursesLog.Main - hello
+203  [main] INFO  javaCoursesLog.Main - Example log from Main
+211  [main] DEBUG javaCoursesLog.Main - hello
+213  [main] INFO  javaCoursesLog.Main - Example log from Main
+200  [main] DEBUG javaCoursesLog.Main - hello
+202  [main] INFO  javaCoursesLog.Main - Example log from Main
