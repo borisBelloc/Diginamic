@@ -22,8 +22,8 @@ public class MainTest {
 		httpDataServiceMock = Mockito.mock(HttpDataService.class);
 		
 		Mockito.when(httpDataServiceMock.getJsonIp()).thenReturn(
-//				"{\"ip\":\"92.154.66.22\",\"about\":\"/about\",\"Pro!\":\"http://getjsonip.com\",\"reject-fascism\":\"Support the ACLU: https://action.aclu.org/secure/donate-to-aclu\"}"
-				"92.154.66.22"
+				"{\"ip\":\"92.154.66.22\"}"
+//				"92.154.66.22"
 				);
 
 		myIpService = new MyIpService(httpDataServiceMock);
@@ -36,9 +36,8 @@ public class MainTest {
 		String myIpMocked = httpDataServiceMock.getJsonIp();
 		// Real
 		HttpDataService myHttp = new HttpDataService();
-		MyIpService myIp = new MyIpService(myHttp);
 		
-		assertEquals( myIpMocked , myIp.getMyIp());
+		assertEquals("92.154.66.22" , myIpService.getMyIp());
 	}
 	
 	
