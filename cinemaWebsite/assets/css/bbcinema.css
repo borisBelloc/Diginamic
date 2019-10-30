@@ -260,3 +260,8 @@ a:visited {
     height: 40px;
   }
 }
+
+/* cheat, because no social links */
+.pointer {
+  cursor: pointer;
+}
