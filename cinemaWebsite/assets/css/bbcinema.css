@@ -1,0 +1,22 @@
+/* VERIF */
+[class*="container"] {
+  /* text-align: center; */
+  /* border: 1px solid coral; */
+}
+
+[class*="row"] {
+  border: 1px solid red;
+}
+
+[class*="col-"] {
+  border: 1px solid yellow;
+  
+}
+
+/* ------------------- */
+/* NAVBAR  */
+/* ------------------- */
+
+.nav-link {
+  font-weight: bold;
+}
