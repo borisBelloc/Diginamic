@@ -22,7 +22,9 @@
 
 </head>
 
-<body>
+<body data-spy="scroll">
+
+  <!-- TODO: anchor and navbar space -->
 
   <!-- CONTENT -->
 
@@ -30,23 +32,29 @@
   <header>
     <nav class="navbar navbar-expand navbar-dark bg-dark  fixed-top transparent">
       <a class="offset-2 navbar-brand">
-        <img src="/favicon-32x32.png" alt="Cinema logo"> <!-- width="30" height="30" -->
+        <img src="/favicon-32x32.png" alt="Cinema logo"><span class="pl-2 signatureFont">Cinéma BB</span>
       </a>
       <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button> -->
-      <div class="collapse navbar-collapse offset-7" id="navbarNav">
+      <div class="collapse navbar-collapse offset-6" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Menu <span class="sr-only">(current)</span></a>
-          </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
+          <!-- <li class="nav-item active">
+            <a class="nav-link displayNone" href="#">Home <span class="sr-only">(current)</span></a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link nowrap" href="#affiche">Films à l'affiche</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-          </li> -->
+            <a class="nav-link" href="#infos">Infos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#carte">Carte</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -56,12 +64,13 @@
         <div class="col-12 text-center img-fluid px-0 ">
 
           <div id="cinemaPicture">
-            <div class="pt-4 signatureFont sizeFive">
+            <div class="pt-4 signatureFont sizeFive colorBlacked ">
               Cinéma BB
               <br>
               <p class="sizeZeroFive">Le cinéma qu'il vous plait.</p>
             </div>
           </div>
+
         </div>
       </div>
     </div>
@@ -73,7 +82,7 @@
   <section>
     <div class="container">
       <div class="row">
-        <div class="my-5 col-12">
+        <div id="affiche" class="my-5 col-12">
           <h1>Les films à l'affiche</h1>
         </div>
 
@@ -95,17 +104,19 @@
             <h1>Description</h1>
           </div>
 
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni neque, tempore minima eius officiis
-            magnam!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nemo dolorum, reprehenderit quia amet magni
-            esse consectetur fuga eos, praesentium nam repudiandae quisquam. Dolorem cum possimus repudiandae
-            molestiae
-            obcaecati tempora accusantium cupiditate voluptates veritatis? Voluptatum cum culpa, reprehenderit eaque
-            velit, reiciendis dolore laudantium blanditiis tenetur harum, nemo quam quos assumenda.
-          </p>
+          <div class="silverColor">
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni neque, tempore minima eius officiis
+              magnam!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nemo dolorum, reprehenderit quia amet magni
+              esse consectetur fuga eos, praesentium nam repudiandae quisquam. Dolorem cum possimus repudiandae
+              molestiae
+              obcaecati tempora accusantium cupiditate voluptates veritatis? Voluptatum cum culpa, reprehenderit eaque
+              velit, reiciendis dolore laudantium blanditiis tenetur harum, nemo quam quos assumenda.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -119,7 +130,7 @@
 
     <div class="container">
       <div class="row">
-        <div class="my-5 mb-3 col-12">
+        <div id="infos" class="my-5 mb-3 col-12">
           <h1>Infos pratiques</h1>
         </div>
       </div>
@@ -175,7 +186,7 @@
     <div class="container">
       <div class="row">
 
-        <div class="my-5 mb-3 col-12">
+        <div class="my-5 mb-3 col-12" id="carte">
           <h1>Nous trouver</h1>
         </div>
 
@@ -206,11 +217,10 @@
   <section>
     <div class="container">
       <!-- <div class="row"> -->
-      <div class="my-5 mb-3 col-12">
+      <div class="my-5 mb-3 col-12" id="contact">
         <h1>Formulaire de contact</h1>
       </div>
       <!-- </div> -->
-
       <!-- <form id="contact-form" method="post" action="contact.php" role="form"> -->
 
       <form id="contact-form" class="mt-5" role="form">
@@ -279,7 +289,6 @@
         </div>
       </form>
 
-
     </div>
   </section>
 
@@ -289,7 +298,6 @@
   <!-- Section 6 -->
 
   <section>
-
     <div class="container">
       <div class="row">
 
@@ -311,20 +319,13 @@
 
   </section>
 
-  <!-- Footer -->
   <footer class="page-footer font-small blue">
-
-    <!-- Copyright -->
     <div class="text-center py-3 sizeZeroNine mt-5"><i>© 2019 Copyright : BELLOC Boris</i>
       <!-- <a href="#"> BELLOC Boris</a> -->
 
     </div>
-    <!-- Copyright -->
 
   </footer>
-  <!-- Footer -->
-
-  <!-- CONTENT -->
 
 
 
