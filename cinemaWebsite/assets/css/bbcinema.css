@@ -5,12 +5,48 @@
 }
 
 [class*="row"] {
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 [class*="col-"] {
-  border: 1px solid yellow;
-  
+  /* border: 1px solid yellow; */
+}
+
+body {
+  background-color: #a6acb1;
+}
+
+
+/* Bootstrap override */
+caption {
+  caption-side: top;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+/* ------------------- */
+/* FONTS  */
+/* ------------------- */
+@font-face {
+  font-family: 'PhotographSignature';
+  src: url('../fonts/PhotographSignature.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.signatureFont {
+  /* font-family: 'Segoe UI'; */
+  font-family: "PhotographSignature", sans-serif;
+  /* font-weight: 300; */
+  /* font-style: normal; */
+}
+
+.sizeFive {
+  font-size: 5em;
+}
+
+.sizeZeroFive {
+  font-size: 0.5em;
 }
 
 /* ------------------- */
@@ -19,4 +55,34 @@
 
 .nav-link {
   font-weight: bold;
+}
+
+.floatingNav {
+  box-shadow: 0px 1px 10px rgb(0, 0, 0);
+}
+
+/* ------------------- */
+#cinemaPicture {
+  background-image: url("/assets/img/cinema1200x680.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* height: 800px; */
+  height: 100vh;
+  /* width: 100vh; */
+}
+
+/* TABLE */
+.table {
+  text-align: center;
+}
+
+#tabWeek {
+  vertical-align: middle;
+}
+
+.emptyCell {
+  background-color: #a6acb1;
+  border-top: none !important;
+  border-left: none !important;
 }
