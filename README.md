@@ -4,6 +4,8 @@ Diginamic
 
 Folder:
 ----------
+**cinemaWebsite:** Practical works for a html/css/js course
+
 **javaCourses :** TP from courses (youngest to oldest).
  
   - Bookstore2 : JPA (Hibernate)
