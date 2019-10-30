@@ -36,9 +36,9 @@ caption {
   font-size: 1em;
 }
 
-/* ------------------- */
+/* ********************************** */
 /* FONTS  */
-/* ------------------- */
+/* ********************************** */
 @font-face {
   font-family: 'PhotographSignature';
   src: url('../fonts/PhotographSignature.ttf') format('truetype');
@@ -71,10 +71,9 @@ caption {
   white-space: nowrap;
 }
 
-/* ------------------- */
+/* ********************************** */
 /* NAVBAR  */
-/* ------------------- */
-
+/* ********************************** */
 .nav-link {
   font-weight: bold;
 }
@@ -134,6 +133,7 @@ caption {
   height: 100%;
   width: 100%;
   position: absolute;
+
 }
 
 /* img */
@@ -146,4 +146,117 @@ caption {
 
 .movieImg:hover {
   transform: scale(1.1);
+}
+
+/* tel */
+
+a#tel:active,
+a#tel:link {
+  color: #F2C992;
+}
+
+a:visited {
+  color: #f1bd78;
+}
+
+/* ********************************** */
+/* ANCHORS */
+/* ********************************** */
+/* position the anchor an offset higher or lower than where it actually appears on the page */
+/* @media (min-width: 768px) and (max-width: 979px) { ... } */
+.anchor {
+  display: block;
+  position: relative;
+  visibility: hidden;
+}
+
+
+@media (max-width: 767px) {
+  .anchor {
+    top: -150px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .anchor {
+    top: -200px;
+  }
+}
+
+@media only screen AND (min-width: 992px) {
+  .anchor {
+    top: -70px;
+  }
+
+  .anchorTwo {
+    top: 50px;
+  }
+}
+
+/* ********************************** */
+/* BTN TO TOP */
+/* ********************************** */
+
+#btnToTop {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Fixed/sticky position */
+  z-index: 99;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: #343A40;
+  border-radius: 50%;
+  /* Rounded corners */
+  /* IE8 */
+  behavior: url(PIE.htc);
+  /* Dealabs */
+  /* -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,.5); */
+  -webkit-box-shadow: 0 2px 4px 0 rgb(58, 58, 58, .5);
+  -moz-box-shadow: 0 2px 4px 0 rgb(58, 58, 58, .5);
+  -o-box-shadow: 0 2px 4px 0 rgb(58, 58, 58, .5);
+}
+
+/* F2C992 */
+#btnToTop:hover {
+  background-color: rgb(47, 51, 54);
+  -webkit-box-shadow: 0 2px 4px 0 rgb(25, 26, 27);
+  cursor: pointer;
+}
+
+@media only screen AND (min-width: 1168px) {
+  #btnToTop {
+    bottom: 20px;
+    right: 50px;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media only screen AND (max-width: 426px) {
+  #btnToTop {
+    bottom: 20px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media only screen AND (min-width: 427px) and (max-width: 1023px) {
+  #btnToTop {
+    bottom: 20px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media only screen AND (min-width: 1024px) and (max-width: 1167px) {
+  #btnToTop {
+    bottom: 20px;
+    right: 50px;
+    width: 40px;
+    height: 40px;
+  }
 }
