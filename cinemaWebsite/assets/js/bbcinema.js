@@ -40,3 +40,52 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+
+// Light at mouse 
+
+// var originalBG = '000000',
+//   lightColor = 'fff',
+//   gradientSize = 2;
+
+// $('body')
+//   .mousemove(function (e) {
+//     originalBG = $("body").css("background-color");
+//     x = e.pageX - this.offsetLeft;
+//     y = e.pageY - this.offsetTop;
+//     xy = x + " " + y;
+
+//     bgWebKit = "-webkit-gradient(radial, " + xy + ", 0, " + xy + ", 100, from(rgba(255,255,255,0.8)), to(rgba(255,255,255,0.0))), " + originalBG;
+//     bgMoz = "-moz-radial-gradient(" + x + "px " + y + "px 45deg, circle, " + lightColor + " 0%, " + originalBG + " " + gradientSize + "px)";
+
+//     $(this)
+//       .css({
+//         background: bgWebKit
+//       })
+//       .css({
+//         background: bgMoz
+//       });
+
+//   }).mouseleave(function () {
+//     $(this).css({
+//       background: originalBG
+//     });
+//   });
+
+
+// PARALAX (Greensock)
+$("#cinema").mousemove(function (e) {
+  parallaxIt(e, "#slogan", -20);
+  parallaxIt(e, "#cinemaPicture", -6);
+});
+
+function parallaxIt(e, target, movement) {
+  var $this = $("#cinema");
+  var relX = e.pageX - $this.offset().left;
+  var relY = e.pageY - $this.offset().top;
+
+  TweenMax.to(target, 1, {
+    x: (relX - $this.width() / 2) / $this.width() * movement,
+    y: (relY - $this.height() / 2) / $this.height() * movement
+  });
+}
