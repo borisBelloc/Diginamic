@@ -1,13 +1,13 @@
 // Navbar shadow on scroll
 $(window).scroll(function () {
-  if ($(window).scrollTop() > 500) {
+  if ($(window).scrollTop() > 700) {
     $('.navbar').addClass('floatingNav');
     $('.navbar').removeClass('transparent');
     $('.navbar-nav').removeClass('displayNone');
   } else {
     // $('.navbar').removeClass('floatingNav');
   }
-  if ($(window).scrollTop() < 500) {
+  if ($(window).scrollTop() < 700) {
     $('.navbar').addClass('transparent');
     $('.navbar-nav').addClass('displayNone');
     $('.navbar').removeClass('floatingNav');
