@@ -265,3 +265,14 @@ a:visited {
 .pointer {
   cursor: pointer;
 }
+
+/* !! */
+/* Newletter */
+
+.btnSubscribe {
+  background-color: #aaa9ad;
+}
+
+.sharp {
+  border-radius: 0;
+}

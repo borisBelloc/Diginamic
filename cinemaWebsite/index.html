@@ -284,8 +284,10 @@
               </div>
             </div>
 
-            <div class="offset-8 col-1">
-              <input type="submit" class="btn btn-dark " value="Envoyer">
+            <div class="offset-4 col-4">
+              <!-- <input type="submit" class="btn btn-dark " value="Envoyer"> -->
+              <button type="button" class="btn btn-dark btn-block">Envoyer</button>
+
             </div>
           </div>
 
@@ -321,7 +323,24 @@
     </div>
 
 
+    <!-- ! -->
+    <div class="container p-3 mt-5 text-center ">
+      <h4>Inscrivez-vous à notre lettre mensuelle</h4>
+      <div class="row">
+
+        <div class="col-4 mx-auto mt-3">
+          <form action="#" method="Post">
+            <input id="newletter" type="email" name="email" class="form-control sharp text-center"
+              placeholder="votre adresse email">
+            <button type="button" class="btn btn-secondary btnSubscribe btn-block sharp">s'inscrire</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+    <!-- ! -->
   </section>
+
 
   <footer class="page-footer font-small blue">
     <div class="text-center py-3 sizeZeroNine mt-5"><i>© 2019 Copyright : BELLOC Boris</i>
@@ -331,8 +350,8 @@
 
   </footer>
 
+  <!-- BUTTON GO TO TOP // "currentColor" -->
   <div id="btnToTopContainer">
-    <!-- BUTTON GO TO TOP // currentColor -->
     <button onclick="topFunction()" id="btnToTop" title="Haut de page">
 
       <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-up" width="20" height="20"
