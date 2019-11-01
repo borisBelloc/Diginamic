@@ -4,6 +4,8 @@ Diginamic
 
 Folder:
 ----------
+**DigiMagic:** Java RPG (console)
+
 **cinemaWebsite:** Practical works for a html/css/js course
 
 **javaCourses :** TP from courses (youngest to oldest).
