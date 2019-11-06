@@ -13,6 +13,13 @@
 }
 
 /* -------------- */
+/*
+body       : rgb(0, 0, 0)
+Gold       : #F2C992
+Silver     : #aaa9ad
+Navbar/btn : #343A40
+*/
+/* -------------- */
 
 body {
   background-color: rgb(0, 0, 0);
@@ -102,6 +109,10 @@ caption {
   height: 100vh;
 }
 
+/* Fix for mouse over paralax effect */
+.hideIt {
+overflow: hidden;
+}
 /* TABLE */
 .table {
   text-align: center;
@@ -142,6 +153,7 @@ caption {
   /* box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.925); */
   box-shadow: 1px 1px 5px #aaa9ad;
   transition: transform .2s;
+  /* min-height: 465px; */
 }
 
 .movieImg:hover {
@@ -266,7 +278,6 @@ a:visited {
   cursor: pointer;
 }
 
-/* !! */
 /* Newletter */
 
 .btnSubscribe {
@@ -275,4 +286,38 @@ a:visited {
 
 .sharp {
   border-radius: 0;
+}
+
+/* Btn reservez sceance */
+.goldenBtn {
+  border: 1px solid #F2C992;
+}
+.goldenBtn:hover {
+  color: #F2C992;
+}
+
+/* BTN Modal */
+.shadowBtn {
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
+  /* transition: all 0.3s ease 0s; */
+}
+
+/* Reservation MODALS */
+.modal-content.reservationModalBody {
+  background-color: #343A40;
+  color: #ffffff;
+}
+.thead-darker {
+  background-color:rgb(33, 36, 39)!important;
+}
+
+.panierQuantity {
+  /* width: 2.5em; */
+}
+
+.sharpBtn {
+  min-height: 100%;
+  border-radius: 0;
+  /* overflow: hidden; */
+  /* overflow-wrap: break-word; */
 }
