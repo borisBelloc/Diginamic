@@ -1,0 +1,3 @@
+[submodule "CinemaBB"]
+	path = CinemaBB
+	url = https://github.com/borisBelloc/CinemaBB.git
