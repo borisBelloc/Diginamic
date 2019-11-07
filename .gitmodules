@@ -1,3 +1,6 @@
 [submodule "CinemaBB"]
 	path = CinemaBB
 	url = https://github.com/borisBelloc/CinemaBB.git
+[submodule "DigiMagic"]
+	path = DigiMagic
+	url = https://github.com/borisBelloc/DigiMagic.git
