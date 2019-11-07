@@ -6,7 +6,7 @@ Folder:
 ----------
 **DigiMagic:** Java RPG (console)
 
-**cinemaWebsite:** Practical works for a html/css/js course
+**CinemaBB:** Personnal works for a html/css/js course (Website for a cinema)
 
 **javaCourses :** TP from courses (youngest to oldest).
  
