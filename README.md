@@ -10,6 +10,7 @@ Folder:
 
 **javaCourses :** TP from courses (youngest to oldest).
  
+  - tp71-JEE_Servlet : 
   - tp51-Get_ip : Java test with mock (+mockito)
   - tp50 : Java test
   - reservol : JPA(Hibernate)
