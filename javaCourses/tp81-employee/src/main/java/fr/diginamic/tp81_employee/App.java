@@ -4,18 +4,14 @@ import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class App {
-    public static void main( String[] args ) {
+    public static void main(String[] args) {
 
     	System.out.println("Start");
     	
-//		System.out.println("Context loaded");
-		
-		
-		AbstractApplicationContext interf1 = new ClassPathXmlApplicationContext("applicationContext.xml");
-		
-		AuthenticationService asi = interf1.getBean(AuthenticationService.class);
+		AbstractApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+		AuthenticationService auth = context.getBean(AuthenticationService.class);
+		System.out.println("AUTHENTIFICATION : " + auth.authenticate("papa", "toto"));
 
-		asi.authenticate("alber", "22");
 		
     	
     	
