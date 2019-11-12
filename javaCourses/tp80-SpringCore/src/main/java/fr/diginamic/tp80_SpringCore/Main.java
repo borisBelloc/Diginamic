@@ -15,8 +15,10 @@ public class Main {
 		MyObject objA = (MyObject)context.getBean("myobjA");
 		System.out.println("Object : " + objA);
 		
+		
 		MyObject objB = (MyObject)context.getBean("myobjB");
 		System.out.println("Object : " + objB.getParent().getId());
+		System.out.println("Object : " + objA.getName() + " " + objA.getKeywords());
 		
 	}
 
