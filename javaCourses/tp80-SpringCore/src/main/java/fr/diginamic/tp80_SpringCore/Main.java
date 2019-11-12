@@ -11,6 +11,9 @@ public class Main {
 		AbstractApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		System.out.println("Context loaded");
 		
+		MyObject objA = (MyObject)context.getBean("myobjA");
+		System.out.println("Object : " + objA);
+		
 	}
 
 }
