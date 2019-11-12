@@ -11,8 +11,12 @@ public class Main {
 		AbstractApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		System.out.println("Context loaded");
 		
+		// Creation premier objet
 		MyObject objA = (MyObject)context.getBean("myobjA");
 		System.out.println("Object : " + objA);
+		
+		MyObject objB = (MyObject)context.getBean("myobjB");
+		System.out.println("Object : " + objB.getParent().getId());
 		
 	}
 

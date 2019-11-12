@@ -8,6 +8,7 @@ public class MyObject {
 	String name;
 	MyObject parent;
 	List<String> keywords;
+	
 	public int getId() {
 		return id;
 	}
