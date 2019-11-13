@@ -37,14 +37,12 @@ public class App {
 		try {
 			service.saveDummy(manu);
 		} catch (DummyAlreadyExistsException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		// décomenter pour erreur
 //		try {
 //			service.saveDummy(manu);
 //		} catch (DummyAlreadyExistsException e) {
-//			// TODO Auto-generated catch block
 //			e.printStackTrace();
 //		}
 //		

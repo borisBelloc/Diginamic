@@ -38,7 +38,6 @@ public class AspectLogger {
 		System.out.println("ERREUR DETECTED DECORATOR:: " + error + "::/FIN DECORATOR\n");
 	}
 	
-//	@Around("saveDummy()")
 	@Around("execution(* fr.diginamic.tp81_employee.DummyService.saveDummy(..))")
 	public Object chronoSaveFunction(ProceedingJoinPoint pjp) throws Throwable {
 		
@@ -54,23 +53,4 @@ public class AspectLogger {
         return returnedValue;
 		
 	}
-
-//	@Around("execution(* aop.DummyService.saveDummy(..))")
-//    public Object logAround(ProceedingJoinPoint pjp) throws Throwable {
-//        
-//		long timeStart = System.currentTimeMillis();
-//        System.out.println(" Before calling pjp ");
-//        
-//        TimeUnit.SECONDS.sleep(1);
-//        Object returnedValue = pjp.proceed();
-//        
-//        long timeFinish = System.currentTimeMillis();
-//        
-//        System.out.println(" After calling pjp " + " Timing process is : " + ( timeFinish - timeStart ) + " MilliSeconds ");
-//        
-//        return returnedValue;
-//    }
-	
-	
-
 }
