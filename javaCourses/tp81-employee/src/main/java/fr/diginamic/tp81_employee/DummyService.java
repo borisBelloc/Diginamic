@@ -46,4 +46,6 @@ public class DummyService {
 	public void deleteDummmy(Long id) {
 		dummies = dummies.stream().filter(d -> d.getId() != id).collect(Collectors.toList());
 	}
+	
+	
 }
