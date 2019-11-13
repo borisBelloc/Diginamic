@@ -12,6 +12,7 @@ public class App {
 		AuthenticationService auth = context.getBean(AuthenticationService.class);
 		System.out.println("AUTHENTIFICATION : " + auth.authenticate("papa", "toto"));
 
+//		Thread.sleep(3000L);
 		
     	
     	

@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>fr.diginamic</groupId>
-	<artifactId>tp80-SpringCore</artifactId>
+	<artifactId>tp81-employee</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 

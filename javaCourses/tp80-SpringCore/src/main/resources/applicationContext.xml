@@ -27,6 +27,7 @@
 		<property name="id" value="99"/>
 		<property name="name" value="Marcel"/>
 		<property name="parent" ref="myobjA"/>
+		
 	</bean>
 
 	
