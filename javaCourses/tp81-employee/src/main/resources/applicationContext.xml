@@ -12,14 +12,16 @@
 
 	<context:component-scan base-package="fr.diginamic.tp81_employee"/>
 
-<!--  Scan 1 -->
+<!--  Scan 1 TP81 XML-->
 <!-- 
 	<context:component-scan
 		base-package="fr.diginamic" />
 	<context:annotation-config /> -->
 
-<!--  Scan 1 -->	
+<!--  Scan 1 TP81 XML-->	
 <!-- 	<bean id="auth1" class="fr.diginamic.tp81_employee.AuthenticationServiceImpl"> 
 	</bean> -->
+	
+	
 
 </beans>
