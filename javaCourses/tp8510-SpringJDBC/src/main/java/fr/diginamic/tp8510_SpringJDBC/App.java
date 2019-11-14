@@ -9,6 +9,9 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.AbstractApplicationContext;
 
+import fr.diginamic.tp8510_SpringJDBC.dao.EmployeeJdbcRepository;
+import fr.diginamic.tp8510_SpringJDBC.model.Employee;
+
 
 @Configuration
 @ComponentScan
@@ -27,8 +30,11 @@ public class App {
     	req1.save(e1);
     	
     	System.out.println("----------");
-    	
     	System.out.println(req1.findAll());
+    	System.out.println("----------");
+    	req1.deleteAllEmployees();
+    	System.out.println(req1.findAll());
+    	
     	
     }
 }
