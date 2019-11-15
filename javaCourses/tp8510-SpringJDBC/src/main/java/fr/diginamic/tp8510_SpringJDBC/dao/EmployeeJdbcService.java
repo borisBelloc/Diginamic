@@ -45,7 +45,6 @@ public class EmployeeJdbcService {
 	public void saveAll(List<Employee> listeEmployes) {
 		for(Employee employee : listeEmployes) {
 			employeeRepository.save(employee);
-			
 		}
 		
 	}
