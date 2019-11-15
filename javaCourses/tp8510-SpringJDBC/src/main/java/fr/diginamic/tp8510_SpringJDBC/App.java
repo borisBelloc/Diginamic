@@ -52,8 +52,10 @@ public class App {
 		Employee e3 = new Employee();
 		e3.setFirstname("Emilie");
 		
+//		Employee e4 = new Employee();
 //		List<Employee> listEmployee = Arrays.asList(e2, e3, e4);
 //    	requestTransaction1.saveAll(listEmployee);
+		
     	System.out.println("----------");
     	System.out.println(requestTransaction1.findAll());
     	
