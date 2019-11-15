@@ -39,13 +39,16 @@ public class EmployeeJdbcService {
 	public void deleteAllEmployees() {
 		employeeRepository.deleteAllEmployees();
 	}
-	
-	// Ajouter une méthode qui met à jour une liste d’utilisateurs 
-	// et faire un rollback si un des utilisateurs de la liste n’existe pas
+
+	@Deprecated
 	public void saveAll(List<Employee> listeEmployes) {
 		for(Employee employee : listeEmployes) {
 			employeeRepository.save(employee);
 		}
+		
+		// Ajouter une méthode qui met à jour une liste d’utilisateurs 
+		// et faire un rollback si un des utilisateurs de la liste n’existe pas
+//		TODO: faire methode updateAll(
 		
 	}
 }
