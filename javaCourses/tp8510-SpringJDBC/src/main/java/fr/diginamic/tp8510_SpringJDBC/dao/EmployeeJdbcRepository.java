@@ -1,19 +1,22 @@
 package fr.diginamic.tp8510_SpringJDBC.dao;
 
+import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
-import java.sql.Date;
 import java.util.List;
 
 import org.springframework.jdbc.core.RowMapper;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import fr.diginamic.tp8510_SpringJDBC.model.Employee;
 
 // Service : creation d'un bean
+// Repository :
 
-@Service
+@Transactional
+@Repository
 public class EmployeeJdbcRepository extends AbstractJdbcRepository implements EmployeeRepository {
 
 	public void save(Employee employee) {
@@ -28,7 +31,6 @@ public class EmployeeJdbcRepository extends AbstractJdbcRepository implements Em
 		return getJdbcTemplate().query(sqlQuery, new EmployeeRowMapper());
 	}
 	
-
 	public Employee findBySsn(String ssn) {
 		String sqlQuery = "SELECT id, firstname, lastname, hiredate, salary, ssn FROM employee WHERE ssn = ?";
 		return getJdbcTemplate().queryForObject(sqlQuery, new EmployeeRowMapper(), ssn);
