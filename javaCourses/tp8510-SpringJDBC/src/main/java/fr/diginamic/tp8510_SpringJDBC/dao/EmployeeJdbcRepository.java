@@ -38,7 +38,7 @@ public class EmployeeJdbcRepository extends AbstractJdbcRepository implements Em
 
 	public void update(Employee employee) {
 		String sqlQuery = "UPDATE employee SET firstname = ?, lastname = ?, hiredate = ?, salary = ?, ssn = ? WHERE id = ?";
-		getJdbcTemplate().update(sqlQuery, employee.getFirstname(), employee.getFirstname(), employee.getHiredate(), employee.getSalary(), employee.getSsn(), employee.getId());
+		getJdbcTemplate().update(sqlQuery, employee.getFirstname(), employee.getLastname(), employee.getHiredate(), employee.getSalary(), employee.getSsn(), employee.getId());
 	}
 
 	public void delete(Long employeeId) {
