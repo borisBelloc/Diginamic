@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.AbstractApplicationContext;
 
 import fr.diginamic.tp8510_SpringJDBC.dao.EmployeeJdbcRepository;
-import fr.diginamic.tp8510_SpringJDBC.dao.EmployeeJdbcService;
+import fr.diginamic.tp8510_SpringJDBC.dao.EmployeeService;
 import fr.diginamic.tp8510_SpringJDBC.exception.EmployeeNotFoundException;
 import fr.diginamic.tp8510_SpringJDBC.model.Employee;
 
@@ -26,7 +26,7 @@ public class App {
 		// EmployeeJdbcRepository req1 = context.getBean(EmployeeJdbcRepository.class);
 
 		// context avec transaction
-		EmployeeJdbcService requestTransaction1 = context.getBean(EmployeeJdbcService.class);
+		EmployeeService requestTransaction1 = context.getBean(EmployeeService.class);
 
 		requestTransaction1.deleteAllEmployees();
 		
@@ -44,31 +44,41 @@ public class App {
 		System.out.println(requestTransaction1.findAll());
 //    	System.out.println(req1.findAll());
 		System.out.println("----------");
-//    	req1.deleteAllEmployees(); 
-//		requestTransaction1.deleteAllEmployees();
-//    	System.out.println(req1.findAll());
-//		System.out.println(requestTransaction1.findAll());
 
 		// Retrouver e1 pour recup son id de la BDD :
 		Employee sE1 = requestTransaction1.findBySsn("1758504");
 		
+		Employee e2 = new Employee();
+		e2.setFirstname("Elisa");
 		// modif son nom
-		sE1.setFirstname("BOB");
-		requestTransaction1.update(sE1);	
+		sE1.setFirstname("BOF");
+		List<Employee> listEmployee = Arrays.asList(sE1, e2);
+//		List<Employee> listEmployee = Arrays.asList(sE1);
+		
+//		requestTransaction1.updateList(listEmployee);	
+		try {
+			System.out.println("dans le try");
+			requestTransaction1.updateList(listEmployee);	
+		} catch (EmployeeNotFoundException e) {
+			System.out.println("Exception 404 :: " + e);
+		}
+		
+//		requestTransaction1.update(e2);	
 
 		
 		System.out.println("----------");
-//		Employee e2 = new Employee();
-//		e2.setFirstname("Elisa");
 //		Employee e3 = new Employee();
 //		e3.setFirstname("Emilie");
 		
 //		Employee e4 = new Employee();
-//		List<Employee> listEmployee = Arrays.asList(e2, e3);
 //    	requestTransaction1.saveAll(listEmployee);
 		
-    	System.out.println("----------");
+    	System.out.println("------FIN----");
     	System.out.println(requestTransaction1.findAll());
+    	
+    	
+    	
+//    	requestTransaction1.find(56L);
     	
 	}
 

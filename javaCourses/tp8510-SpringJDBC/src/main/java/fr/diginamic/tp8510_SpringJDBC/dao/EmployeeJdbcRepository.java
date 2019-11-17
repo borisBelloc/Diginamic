@@ -31,6 +31,12 @@ public class EmployeeJdbcRepository extends AbstractJdbcRepository implements Em
 		return getJdbcTemplate().query(sqlQuery, new EmployeeRowMapper());
 	}
 	
+	
+//	public Employee find(long id) {
+//		String sqlQuery = "SELECT id, firstname, lastname, hiredate, salary, ssn FROM employee WHERE id = ?";
+//		return getJdbcTemplate().queryForObject(sqlQuery, new EmployeeRowMapper(), id);
+//	}
+	
 	public Employee findBySsn(String ssn) {
 		String sqlQuery = "SELECT id, firstname, lastname, hiredate, salary, ssn FROM employee WHERE ssn = ?";
 		return getJdbcTemplate().queryForObject(sqlQuery, new EmployeeRowMapper(), ssn);
@@ -71,6 +77,8 @@ public class EmployeeJdbcRepository extends AbstractJdbcRepository implements Em
 		}
 	}
 	
+	
+
 	
 	
 	

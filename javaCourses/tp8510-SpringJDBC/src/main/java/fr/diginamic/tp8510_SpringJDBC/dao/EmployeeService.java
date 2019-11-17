@@ -11,20 +11,27 @@ import fr.diginamic.tp8510_SpringJDBC.exception.EmployeeNotFoundException;
 import fr.diginamic.tp8510_SpringJDBC.model.Employee;
 
 @Service
-@Transactional
-public class EmployeeJdbcService {
+public class EmployeeService {
 
 	@Autowired
 	private EmployeeRepository employeeRepository;
 
+	@Transactional
 	public void save(Employee employee) {
 		employeeRepository.save(employee);
 	}
 
+	@Transactional
 	public List<Employee> findAll() {
 		return employeeRepository.findAll();
 	}
 
+//	@Transactional
+//	public Employee find(long id) {
+//		return employeeRepository.find(id);
+//	}
+	
+	@Transactional
 	public Employee findBySsn(String ssn) {
 		return employeeRepository.findBySsn(ssn);
 	}
@@ -33,15 +40,18 @@ public class EmployeeJdbcService {
 //		employeeRepository.update(employee);
 //	}
 
+	@Transactional
 	public void delete(Long employeeId) {
 		employeeRepository.delete(employeeId);
 	}
 
+	@Transactional
 	public void deleteAllEmployees() {
 		employeeRepository.deleteAllEmployees();
 	}
 
 	@Deprecated
+	@Transactional
 	public void saveAll(List<Employee> listeEmployes) {
 		for (Employee employee : listeEmployes) {
 			employeeRepository.save(employee);
@@ -50,17 +60,25 @@ public class EmployeeJdbcService {
 
 	// Ajouter une méthode qui met à jour une liste d’utilisateurs
 	// et faire un rollback si un des utilisateurs de la liste n’existe pas
-//		TODO: faire methode updateAll(
-//	public void updateEmployee(Employee employee) {
-//		String sqlQuery = "UPDATE employee SET firstname = ?, lastname = ?, hiredate = ?, salary = ?, ssn = ? WHERE id = ?";
-//		employeeRepository.update(sqlQuery, employee.getFirstname(), employee.getLastname(), employee.getHiredate(),
-//				employee.getSalary(), employee.getSsn(), employee.getId());
-//	}
+
 
 	@Transactional(rollbackFor = EmployeeNotFoundException.class)
 	public void update(Employee employee) throws EmployeeNotFoundException {
 		employeeRepository.update(employee);
 	}
+	
+	@Transactional(rollbackFor = EmployeeNotFoundException.class)
+	public void updateList(List<Employee> listEmployee) throws EmployeeNotFoundException {
+		for (Employee employee : listEmployee) {
+			if (employee.getId() == 0 ) {
+				throw new EmployeeNotFoundException(employee.getId());
+			}
+			System.out.println("VERIF ID :: " + employee.getId());
+			employeeRepository.update(employee);
+		}
+	}
+
+
 
 	
 }
