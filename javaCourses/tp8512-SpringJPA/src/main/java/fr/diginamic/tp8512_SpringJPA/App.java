@@ -1,4 +1,4 @@
-package fr.diginamic.tp8510_SpringJDBC;
+package fr.diginamic.tp8512_SpringJPA;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -11,10 +11,10 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.AbstractApplicationContext;
 
-import fr.diginamic.tp8510_SpringJDBC.dao.EmployeeJdbcRepository;
-import fr.diginamic.tp8510_SpringJDBC.dao.EmployeeService;
-import fr.diginamic.tp8510_SpringJDBC.exception.EmployeeNotFoundException;
-import fr.diginamic.tp8510_SpringJDBC.model.Employee;
+import fr.diginamic.tp8512_SpringJPA.dao.EmployeeJdbcRepository;
+import fr.diginamic.tp8512_SpringJPA.dao.EmployeeService;
+import fr.diginamic.tp8512_SpringJPA.exception.EmployeeNotFoundException;
+import fr.diginamic.tp8512_SpringJPA.model.Employee;
 
 @Configuration
 @ComponentScan

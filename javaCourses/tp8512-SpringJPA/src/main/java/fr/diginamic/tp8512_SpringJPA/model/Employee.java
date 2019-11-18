@@ -1,4 +1,4 @@
-package fr.diginamic.tp8510_SpringJDBC.model;
+package fr.diginamic.tp8512_SpringJPA.model;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;

@@ -1,4 +1,4 @@
-package fr.diginamic.tp8510_SpringJDBC.exception;
+package fr.diginamic.tp8512_SpringJPA.exception;
 
 public class EmployeeNotFoundException extends Exception {
 	

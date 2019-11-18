@@ -1,11 +1,11 @@
-package fr.diginamic.tp8510_SpringJDBC.dao;
+package fr.diginamic.tp8512_SpringJPA.dao;
 
 import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import fr.diginamic.tp8510_SpringJDBC.exception.EmployeeNotFoundException;
-import fr.diginamic.tp8510_SpringJDBC.model.Employee;
+import fr.diginamic.tp8512_SpringJPA.exception.EmployeeNotFoundException;
+import fr.diginamic.tp8512_SpringJPA.model.Employee;
 
 @Repository
 public interface EmployeeRepository {

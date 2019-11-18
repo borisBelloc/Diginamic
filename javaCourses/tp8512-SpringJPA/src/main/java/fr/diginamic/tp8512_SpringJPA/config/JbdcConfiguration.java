@@ -1,4 +1,4 @@
-package fr.diginamic.tp8510_SpringJDBC.config;
+package fr.diginamic.tp8512_SpringJPA.config;
 
 import javax.sql.DataSource;
 
