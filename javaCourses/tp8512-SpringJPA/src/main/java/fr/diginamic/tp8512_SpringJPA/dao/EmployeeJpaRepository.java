@@ -1,34 +1,20 @@
 package fr.diginamic.tp8512_SpringJPA.dao;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.time.LocalDate;
-import java.sql.Date;
 import java.util.List;
 
-import org.springframework.jdbc.core.RowMapper;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
+import org.springframework.stereotype.Repository;
 
-import fr.diginamic.tp8512_SpringJPA.exception.EmployeeNotFoundException;
 import fr.diginamic.tp8512_SpringJPA.model.Employee;
 
-// Service : creation d'un bean
 
 
-// FICHIER NON UTILISé  FICHIER NON UTILISé FICHIER NON UTILISé FICHIER NON UTILISé FICHIER NON UTILISé 
-// FICHIER NON UTILISé  FICHIER NON UTILISé FICHIER NON UTILISé FICHIER NON UTILISé FICHIER NON UTILISé 
-// FICHIER NON UTILISé  FICHIER NON UTILISé FICHIER NON UTILISé FICHIER NON UTILISé FICHIER NON UTILISé 
-// FICHIER NON UTILISé  FICHIER NON UTILISé FICHIER NON UTILISé FICHIER NON UTILISé FICHIER NON UTILISé 
-// FICHIER NON UTILISé  FICHIER NON UTILISé FICHIER NON UTILISé FICHIER NON UTILISé FICHIER NON UTILISé 
-// FICHIER NON UTILISé  FICHIER NON UTILISé FICHIER NON UTILISé FICHIER NON UTILISé FICHIER NON UTILISé 
+@Repository
+public class EmployeeJpaRepository extends AbstractJpaRepository implements EmployeeRepository {
 
-@Transactional
-public class EmployeeJpaRepository extends AbstractJdbcRepository implements EmployeeRepository {
-
+	
 	public void save(Employee employee) {
-		// TODO Auto-generated method stub
-		
+		System.out.println("INSIDE EmployeeJpaRepository.save()");
+		super.persist(employee);
 	}
 
 	public List<Employee> findAll() {
