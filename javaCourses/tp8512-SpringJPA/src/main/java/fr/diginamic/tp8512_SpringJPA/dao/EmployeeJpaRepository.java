@@ -13,7 +13,7 @@ public class EmployeeJpaRepository extends AbstractJpaRepository implements Empl
 
 	
 	public void save(Employee employee) {
-		System.out.println("INSIDE EmployeeJpaRepository.save()");
+		System.out.println("INSIDE EmployeeJpaRepository.save() :: SAVED IN DB");
 		super.persist(employee);
 	}
 
@@ -33,20 +33,20 @@ public class EmployeeJpaRepository extends AbstractJpaRepository implements Empl
 	}
 
 	public void delete(Long employeeId) {
-		// TODO Auto-generated method stub
-		
+		// 	super.delete(employee);
 	}
 
+	public void deleteEmployee(Employee employee) {
+		System.out.println("EMPLOYEE DELETED");
+		super.delete(employee);
+	}
+
+	
 	public void deleteAllEmployees() {
 		// TODO Auto-generated method stub
 		
 	}
 
-//	@Override
-//	public Employee find(long id) {
-//		// TODO Auto-generated method stub
-//		return null;
-//	}
 
 	
 }

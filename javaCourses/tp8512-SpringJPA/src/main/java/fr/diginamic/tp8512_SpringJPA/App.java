@@ -33,7 +33,7 @@ public class App {
 		requestTransaction1.deleteAllEmployees();
 
 		Employee e1 = new Employee();
-		e1.setFirstname("Boris");
+		e1.setFirstname("TRUDEAU");
 		e1.setHiredate(LocalDate.now());
 		e1.setLastname("Belloc");
 		e1.setSalary(new BigDecimal(1000));
@@ -41,21 +41,24 @@ public class App {
 
 		requestTransaction1.save(e1);
 
+//		requestTransaction1.deleteEmployee(e1);
+		
+		
 		System.out.println("----------");
 		System.out.println(requestTransaction1.findAll());
 //    	System.out.println(req1.findAll());
 		System.out.println("----------");
 
 		// Retrouver e1 pour recup son id de la BDD :
-		Employee sE1 = requestTransaction1.findBySsn("1758504");
+//		Employee sE1 = requestTransaction1.findBySsn("1758504");
 
-		Employee e2 = new Employee();
-		e2.setFirstname("Elisa");
+//		Employee e2 = new Employee();
+//		e2.setFirstname("Elisa");
 		// modif son nom
 		
 //		sE1.setFirstname("BOF");
 		
-		List<Employee> listEmployee = Arrays.asList(sE1, e2);
+//		List<Employee> listEmployee = Arrays.asList(sE1, e2);
 //		List<Employee> listEmployee = Arrays.asList(sE1);
 
 //		try {

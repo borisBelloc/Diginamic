@@ -55,7 +55,7 @@ public class JpaConfiguration {
 
 	Properties additionalProperties() {
 		Properties properties = new Properties();
-//	properties.setProperty("hibernate.show_sql", environment.getRequiredProperty("hibernate.show_sql"));
+		properties.setProperty("hibernate.show_sql", environment.getRequiredProperty("hibernate.show_sql"));
 		properties.setProperty("hibernate.hbm2ddl.auto", environment.getRequiredProperty("hibernate.hbm2ddl.auto"));
 		properties.setProperty("hibernate.dialect", environment.getRequiredProperty("hibernate.dialect"));
 		properties.setProperty("hibernate.format_sql", environment.getRequiredProperty("hibernate.format_sql"));
