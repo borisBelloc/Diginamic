@@ -1,9 +1,6 @@
 package fr.diginamic.tp8330_SpringMvc.model;
 
-import java.time.LocalDate;
-
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -12,9 +9,6 @@ import fr.diginamic.tp8330_SpringMvc.dao.IoEntity;
 @Table(name = "user_")
 public class User implements IoEntity {
 	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 6110450423867174653L;
 	
 	@Id
@@ -34,8 +28,6 @@ public class User implements IoEntity {
 		this.password = password;
 		this.name = name;
 	}
-
-
 	
 	
 	@Override
