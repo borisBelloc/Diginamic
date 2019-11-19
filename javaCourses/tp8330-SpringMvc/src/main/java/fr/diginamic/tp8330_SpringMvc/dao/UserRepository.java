@@ -14,6 +14,12 @@ public class UserRepository extends AbstractJpaRepository<User> {
 	public User findOneByLogin(String login) {
 		return entityManager.find(type, login);
 	}
+	
+//	TODO: faire les methodes avec les actions
+//	public User save(User user) {
+////		return entityManager.find(type, login);
+//		return user;
+//	}
 
 	
 	

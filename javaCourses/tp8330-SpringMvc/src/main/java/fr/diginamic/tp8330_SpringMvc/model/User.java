@@ -18,12 +18,24 @@ public class User implements IoEntity {
 	private static final long serialVersionUID = 6110450423867174653L;
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue()
 	private long id;
 	private String login;
 	private String password;
 	private String name;
 	
+	public User() {
+		super();
+	}
+	
+	public User(String login, String password, String name) {
+		super();
+		this.login = login;
+		this.password = password;
+		this.name = name;
+	}
+
+
 	
 	
 	@Override

@@ -23,7 +23,7 @@ public class WebAppInitializer implements WebApplicationInitializer {
 
 	private AnnotationConfigWebApplicationContext getContext() {
 		AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
-		context.setConfigLocation("fr.iocean.dta");
+		context.setConfigLocation("fr.diginamic.tp8330_SpringMvc");
 		return context;
 	}
 }

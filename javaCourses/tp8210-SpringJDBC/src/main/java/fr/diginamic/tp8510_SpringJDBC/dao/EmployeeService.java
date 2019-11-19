@@ -3,6 +3,7 @@ package fr.diginamic.tp8510_SpringJDBC.dao;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -14,7 +15,11 @@ import fr.diginamic.tp8510_SpringJDBC.model.Employee;
 public class EmployeeService {
 
 	@Autowired
+	// @Qualifier("employeeJdbcRepository")
+	// si on avait plusieurs classe qui implémenté l'interface, on utiliserait @Qualifier pour preciser qui prendre
 	private EmployeeRepository employeeRepository;
+	// ^ equivalent a :
+//	private EmployeeRepository employeeRepository = new EmployeeJdbcRepository();; 
 
 	@Transactional
 	public void save(Employee employee) {
