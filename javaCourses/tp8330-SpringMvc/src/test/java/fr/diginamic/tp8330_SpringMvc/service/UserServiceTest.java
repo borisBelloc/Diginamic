@@ -5,6 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
@@ -13,13 +14,18 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.context.WebApplicationContext;
 
+import fr.diginamic.tp8330_SpringMvc.App;
 import fr.diginamic.tp8330_SpringMvc.model.User;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
 @TestPropertySource("classpath:application.properties")
 @Transactional
+//Doit pointer vers un @ComponentScan -> tout le package de la class sera scan
+@ContextConfiguration(classes = { App.class })
 public class UserServiceTest {
+	
+	// "context web"
 	@Autowired
 	private WebApplicationContext context;
 	
@@ -32,6 +38,7 @@ public class UserServiceTest {
 	public void initMockMvc() {
 		mockMvc = MockMvcBuilders.webAppContextSetup(context).build();
 	}
+	
 
 	@Test
 	public void TestClass() {

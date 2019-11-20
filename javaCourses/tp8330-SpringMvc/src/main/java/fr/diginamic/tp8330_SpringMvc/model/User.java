@@ -1,11 +1,13 @@
 package fr.diginamic.tp8330_SpringMvc.model;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 import fr.diginamic.tp8330_SpringMvc.dao.IoEntity;
 
+@Entity
 @Table(name = "user_")
 public class User implements IoEntity {
 	
