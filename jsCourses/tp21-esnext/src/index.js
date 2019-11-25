@@ -27,22 +27,40 @@ hearthstoneApi.info().then(allInfo => {
   });
   console.log("MY TAB SET : ", myTabSet);
 
-    // w/ map
+  // w/ map
   let myTabClasses = allInfo.classes.map(e => new ClassType(e));
   // console.log("MAP ICI : ", allClasses);
   console.log("MY TAB CLASS : ", myTabClasses);
 
   // Promesse
-  // hearthstoneApi.set("Basic")
-  //   .then(allBasic => {
-  //     console.log("ALL BASIC : ", allBasic);
-  //     return "toto";
-  //   })
-  //   .then(res => {
-  //     console.log("RES :", res);
-  //   });
+  const allPromiseSet = allInfo.sets
+    .map(n => new SetType(n))
+    .map(SetType => {
+      return hearthstoneApi.set(SetType.name).then(cards => {
+        if (Array.isArray(cards)) {
+          SetType.cards = cards;
+        }
+        return SetType;
+      });
+    });
+  const allPromiseClasses = allInfo.classes
+    .map(n => new ClassType(n))
+    .map(classType => {
+      return hearthstoneApi.classes(classType.name).then(cards => {
+        if (Array.isArray(cards)) {
+          classType.cards = cards;
+        }
+        console.log(classType);
+        return classType;
+      });
+    });
 
+    Promise.all([
+      Promise.all(allPromiseClasses),
+      Promise.all(allPromiseSet)
+    ]).then((results) => {
+      console.log("all with cards ", results);
+      })
+    
 
-
-  
 });

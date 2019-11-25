@@ -31,11 +31,11 @@ export class HearthstoneApi {
         return this._get('cards', query).then(result => result.json());
     }
 
-    set(name) {
+    set(name, query) {
         return this._get(`cards/sets/${name}`, query).then(result => result.json());
     }
 
-    classes(name) {
+    classes(name, query) {
         return this._get(`cards/classes/${name}`, query).then(result => result.json());
     }
     
