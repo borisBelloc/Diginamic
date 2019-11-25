@@ -29,7 +29,6 @@ hearthstoneApi.info().then(allInfo => {
 
   // w/ map
   let myTabClasses = allInfo.classes.map(e => new ClassType(e));
-  // console.log("MAP ICI : ", allClasses);
   console.log("MY TAB CLASS : ", myTabClasses);
 
   // Promesse
