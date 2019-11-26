@@ -1,65 +1,48 @@
-import { HearthstoneApi } from "./scripts/api.js";
+import {getAllSetAndClasses} from './scripts/get-all.js';
+import { HearthstoneApi } from './scripts/api.js';
 
-import { SetType } from "./settype.js";
-import { ClassType } from "./classtype.js";
+
+
+
+/** OBTENIR TOUTES LES CARTES */
+// getAllSetAndClasses().then((results) => {
+//   console.log('all with cards', results);
+// }, (reason) => {
+//   console.log('Error', reason);
+// });
 
 const hearthstoneApi = new HearthstoneApi();
 
-// hearthstoneApi.info().then((allInfo) => {
-//     console.log(allInfo.sets);
-//     console.log(allInfo.classes);
-// });
 
-// console.log(SetType);
-let type1 = new SetType("Basic");
-console.log("BASIC HERE :", type1);
-
-// console.log(ClassType);
-let class1 = new ClassType("Druid");
-console.log("DRUID HERE :", class1);
-
-let myTabSet = [];
-
-hearthstoneApi.info().then(allInfo => {
-  // w/ forEach
-  allInfo.sets.forEach(element => {
-    myTabSet.push(new SetType(element));
+/** Obtenir card avec un set et un nom definis */
+function getCards(setName, className) {
+  return Promise.all([
+    hearthstoneApi.set(setName),
+    hearthstoneApi.classes(className),
+  ]).then(([setsCards, classesCards]) => {
+    console.log("Les valeurs : ", setsCards, classesCards );
+  // code ci-dessous en une ligne :
+  // setsCards.filter(setCard => classesCards.find((classCard) => compareCard(setCard, classCard)))
+    const monTableauFinnal = setsCards.filter(setCard => {
+      const found = classesCards.find((classCard) => {
+        const compare = compareCard(setCard, classCard);
+        return compare;
+      });
+      return found;
+    });
+    return monTableauFinnal;
   });
-  console.log("MY TAB SET : ", myTabSet);
-
-  // w/ map
-  let myTabClasses = allInfo.classes.map(e => new ClassType(e));
-  console.log("MY TAB CLASS : ", myTabClasses);
-
-  // Promesse
-  const allPromiseSet = allInfo.sets
-    .map(n => new SetType(n))
-    .map(SetType => {
-      return hearthstoneApi.set(SetType.name).then(cards => {
-        if (Array.isArray(cards)) {
-          SetType.cards = cards;
-        }
-        return SetType;
-      });
-    });
-  const allPromiseClasses = allInfo.classes
-    .map(n => new ClassType(n))
-    .map(classType => {
-      return hearthstoneApi.classes(classType.name).then(cards => {
-        if (Array.isArray(cards)) {
-          classType.cards = cards;
-        }
-        console.log(classType);
-        return classType;
-      });
-    });
-
-    Promise.all([
-      Promise.all(allPromiseClasses),
-      Promise.all(allPromiseSet)
-    ]).then((results) => {
-      console.log("all with cards ", results);
-      })
     
+}
+/**
+ * Return true if same cardId
+ * @param {Card} card1 
+ * @param {Card} card2 
+ * @returns {boolean} if same id
+ */
+function compareCard (card1, card2) {
+  return card1.cardId === card2.cardId;
+}
 
-});
+
+getCards('Basic', 'Druid').then(res => console.log(res));
