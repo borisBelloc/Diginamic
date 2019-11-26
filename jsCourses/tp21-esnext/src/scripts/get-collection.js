@@ -11,7 +11,7 @@ export function getCards(setName, className) {
   ]).then(([setsCards, classesCards]) => {
     console.log("Toutes les cartes ", setName, " ou ", className, " : ", setsCards, classesCards );
   // code ci-dessous en une ligne :
-  // setsCards.filter(setCard => classesCards.find((classCard) => compareCard(setCard, classCard)))
+  // return setsCards.filter(setCard => classesCards.find((classCard) => compareCard(setCard, classCard)))
     const monTableauFinnal = setsCards.filter(setCard => {
       const found = classesCards.find((classCard) => {
         const compare = compareCard(setCard, classCard);
