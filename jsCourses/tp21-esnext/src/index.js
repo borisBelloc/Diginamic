@@ -15,3 +15,6 @@ import {getCards} from './scripts/get-collection.js';
 
 // Toutes les carte Basic ET Druid
 getCards('Basic', 'Druid').then(results => console.log(results));
+
+
+
