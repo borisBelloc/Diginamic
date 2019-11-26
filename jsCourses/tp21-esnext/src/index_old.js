@@ -7,6 +7,7 @@ const hearthstoneApi = new HearthstoneApi();
 
 /**
  * Avant fonction générique de get-all.js
+ * TP du 25/11/2019
  */
 
 // console.log(SetType);
