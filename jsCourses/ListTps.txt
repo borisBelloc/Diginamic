@@ -1,1 +1,3 @@
 tp1 : nodejs : export component and load it from an other page
+
+tp21-esnext : Promises
