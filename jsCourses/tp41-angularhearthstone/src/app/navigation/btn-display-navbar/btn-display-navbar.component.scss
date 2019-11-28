@@ -1,0 +1,8 @@
+:host {
+  display: block;
+  &.show {
+    background-color: #343A40;
+    color: #343A40;
+    border: 1px solid #343A40;
+  }
+}
