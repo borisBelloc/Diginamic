@@ -15,7 +15,7 @@ export class NavbarComponent implements OnInit {
   navbarDisplay: boolean;
 
   constructor() {
-    this.title = 'MA NAVBAR';
+    this.title = 'bb`';
     this.logo = 'assets/img/favicon-32x32.png';
   }
 
