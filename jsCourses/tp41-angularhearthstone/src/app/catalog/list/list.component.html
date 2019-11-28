@@ -1,0 +1,39 @@
+<p>
+  <!-- {{ cards | json}} -->
+</p>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+
+      <div class="table-responsive mt-5">
+        <!-- <ng-container ngif="cards$ | async as cards"> -->
+        <table class="table table-border">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Name</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let card of cards">
+              <td>{{ card.cardId }}</td>
+              <td>{{ card.name }}</td>
+              <td>
+                <a class="btn btn-dark" routerLink="{{ card.cardId }}">Go to {{ card.cardId }}</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      <!-- </ng-container> -->
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<br /><br /><br />
+
+<a class="btn btn-dark" routerLink="/card/1">1</a>
+<a class="btn btn-dark" routerLink="/card/2">3</a>

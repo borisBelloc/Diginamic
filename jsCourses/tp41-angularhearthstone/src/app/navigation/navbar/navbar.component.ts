@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { NavbardisplayService } from '../services/navbardisplay.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-navbar',
@@ -11,15 +13,19 @@ export class NavbarComponent implements OnInit {
   title: string;
   logo: string;
 
-  @Input()
-  navbarDisplay: boolean;
+  navbarDisplay: Observable<boolean>;
 
-  constructor() {
+  // @Input()
+  // navbarDisplay: boolean;
+
+  // appel du service (injection)
+  constructor(private navbardisplayService: NavbardisplayService) {
     this.title = 'bb`';
     this.logo = 'assets/img/favicon-32x32.png';
   }
 
   ngOnInit() {
+    this.navbarDisplay = this.navbardisplayService.onChangeDisplay();
   }
 
 }

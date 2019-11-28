@@ -1,9 +1,11 @@
-<app-navbar [navbarDisplay]="appNavbarDisplay"></app-navbar>
+<app-navbar></app-navbar>
+<router-outlet></router-outlet>
 
 
+<!-- Appel de la directive pour activer le css -->
 <app-btn-display-navbar
-  appDirectiveOne
-  [(navbarDisplay)]="appNavbarDisplay">
+  appDirectiveOne>
 </app-btn-display-navbar>
+
 
 

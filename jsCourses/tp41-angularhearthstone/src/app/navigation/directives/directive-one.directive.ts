@@ -11,9 +11,10 @@ export class DirectiveOneDirective {
   // surveille le scroll sur la page
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(event) {
-    console.log('Scrolling...', event.target.documentElement.scrollTop);
+    // console.log('Scrolling...', event.target.documentElement.scrollTop);
     // console.log('Scrolling...');
-    if (event.target.documentElement.scrollTop > 264) {
+
+    if (event.target.documentElement.scrollTop > 1) {
       this.show = true;
     } else {
       this.show = false;

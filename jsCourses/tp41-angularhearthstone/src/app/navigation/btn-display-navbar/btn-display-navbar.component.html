@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row justify-content-center my-5">
     <button type="button" class="btn btn-danger" (click)="toggleDisplay()">
-      <span *ngIf="navbarDisplay; else btnElseBlock">
+      <span *ngIf="navbarDisplay | async else btnElseBlock">
         SUPPRIMER LA NAVBAR
       </span>
       <ng-template #btnElseBlock>

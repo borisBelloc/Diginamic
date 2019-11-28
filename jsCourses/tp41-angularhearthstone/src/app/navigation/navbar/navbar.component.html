@@ -1,5 +1,5 @@
 <nav
-*ngIf="navbarDisplay"
+*ngIf="navbarDisplay | async"
 class="shadow-lg navbar navbar-expand-sm navbar-dark bg-dark"
 (mouseenter)="isCollapsed = false"
 (mouseleave)="isCollapsed = true"
@@ -39,9 +39,6 @@ class="shadow-lg navbar navbar-expand-sm navbar-dark bg-dark"
 
 </nav>
 
-
-
-<div style="min-height: 1000px;"></div>
 
 
 
