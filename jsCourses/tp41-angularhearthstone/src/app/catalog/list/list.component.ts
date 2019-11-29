@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscriber } from 'rxjs';
+import { CardsService } from '../cards.service';
 
 @Component({
   selector: 'app-list',
@@ -10,24 +12,28 @@ export class ListComponent implements OnInit {
   cards = [
     {
       cardId: 1,
-      name: 'test'
+      name: 'card 1'
     },
     {
       cardId: 2,
-      name: 'test'
+      name: 'card 2'
     },
     {
       cardId: 3,
-      name: 'test'
+      name: 'card 3'
     },
 
   ];
 
-  constructor() { }
+  constructor(private cardsService: CardsService) { }
 
   ngOnInit() {
+    this.cardsService.getcards('Basic').subscribe(
+      cards => {
+        console.log(cards);
+      });
   }
-
-
-
 }
+
+
+
