@@ -22,7 +22,7 @@
               <td>{{ card.name }}</td>
               <td>
                 <!-- <a class="btn btn-dark" routerLink="{{ card.cardId }}">Go to {{ card.cardId }}</a> -->
-                <a class="btn btn-dark" [routerLink]="card.cardId">Go to {{ card.cardId }}</a>
+                <a class="btn btn-dark" [routerLink]="['..','card', card.cardId]">Go to {{ card.cardId }}</a>
               </td>
             </tr>
           </tbody>
