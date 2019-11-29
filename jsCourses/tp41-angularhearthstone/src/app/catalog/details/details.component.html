@@ -1,1 +1,26 @@
-<p>details works!</p>
+<ng-container *ngIf="card$ | async as card">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div id="card" class="m-5 shadow">
+        <div class="col-12">
+          <h1>{{ card.name }}</h1>
+        </div>
+        <div class="mb-3 img-fluid">
+          <img src="{{ card.imgGold }}" />
+        </div>
+      </div>
+      <!-- {{ card.cardId }} -->
+
+      <br />
+    </div>
+  </div>
+</ng-container>
+
+<div class="container">
+  <div class="row">
+    <div class="offset-4 col-2">
+    kjkjk
+    </div>
+
+  </div>
+</div>

@@ -5,6 +5,23 @@
 <div class="container">
   <div class="row">
     <div class="col-12">
+      <!-- On defini le nom du form puis on indique que c'est lui qui sera envoyé -->
+      <form #monForm="ngForm" (ngSubmit)="submit(monForm)" >
+        <input
+          class="form-control"
+          [(ngModel)]="query"
+          required
+          minlength="3"
+          type="search"
+          name="queryControl"
+        />
+        <button class="btn btn-dark btn-block" type="submit">Recherche</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
       <div class="table-responsive mt-5">
         <ng-container *ngIf="cards$ | async as cards">
           <table class="table table-border">
@@ -18,7 +35,9 @@
             <tbody>
               <tr *ngFor="let card of cards">
                 <td>{{ card.cardId }}</td>
-                <td>{{ card.name }}</td>
+                <td>{{ card.name }} - <img src="{{ card.img }}" /></td>
+
+                <!-- <td>{{ card. </td> -->
                 <td>
                   <!-- #1 syntaxe  -->
                   <!-- <a class="btn btn-dark" routerLink="{{ card.cardId }}">Go to {{ card.cardId }}</a> -->
@@ -43,7 +62,3 @@
 
 <a class="btn btn-dark" routerLink="/card/1">1</a>
 <a class="btn btn-dark" routerLink="/card/2">3</a>
-
-<!-- <div id='card'>
-
-</div> -->

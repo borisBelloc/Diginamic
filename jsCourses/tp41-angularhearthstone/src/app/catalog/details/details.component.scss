@@ -1,4 +1,48 @@
+/* VERIF */
+[class*="container"] {
+  // border: 1px solid coral;
+}
+​[class*="row"] {
+  // border: 1px solid red;
+}
+​[class*='col-'] {
+  // border: 1px solid yellow;
+}
+
+
 p {
   color: #ffffff;
+}
+
+
+#card {
+  border: 1px #000000 solid;
+  border-radius: 25px;
+  height: 505px;
+  width:295px;
+  background-color: #ffffff;
+
+
+}
+
+#card:hover {
+  transform: translateY(-5px);
+  // text-shadow: 2px 2px;
+  // box-shadow: 10px 10px;
+
+
+  // transition-duration: 0.25s, 0.25s, 0.25s, 0.25s;
+  // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1), cubic-bezier(0.4, 0, 0.2, 1), cubic-bezier(0.4, 0, 0.2, 1), cubic-bezier(0.4, 0, 0.2, 1);
+  // transition-delay: 0s, 0s, 0s, 0s;
+  // transition-property: box-shadow, transform, -webkit-box-shadow, -webkit-transform;
+}
+
+.shadow {
+  /* offset-x | offset-y | blur-radius | color */
+
+  /* box-shadow: 0 0 20px 5px rgba(0,0,0,0.4); */
+  -webkit-box-shadow: 0 5px 4px -6px black;
+  -moz-box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 6px -6px black;
 }
 

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscriber, Observable } from 'rxjs';
 import { CardsService } from '../cards.service';
+import { CardInterface } from '../interface/card.interface';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: "app-list",
@@ -24,10 +26,15 @@ export class ListComponent implements OnInit {
 
   // ];
 
-  constructor(private cardsService: CardsService) {}
+  constructor(private cardsService: CardsService) { }
 
   // N'importe quel type mais en tableau
-  cards$: Observable<any[]>;
+  cards$: Observable<CardInterface[]>;
+
+  submit(monForm: NgForm) {
+    // console.log('Le formulaire : ', monForm.valid);
+    console.log('Le formulaire : ', monForm);
+  }
 
   ngOnInit() {
     // affichage en console.log()
