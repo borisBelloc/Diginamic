@@ -5,31 +5,36 @@
 <div class="container">
   <div class="row">
     <div class="col-12">
-
       <div class="table-responsive mt-5">
-        <!-- <ng-container ngif="cards$ | async as cards"> -->
-        <table class="table table-border">
-          <thead>
-            <tr>
-              <th>Id</th>
-              <th>Name</th>
-              <th>Link</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let card of cards">
-              <td>{{ card.cardId }}</td>
-              <td>{{ card.name }}</td>
-              <td>
-                <!-- <a class="btn btn-dark" routerLink="{{ card.cardId }}">Go to {{ card.cardId }}</a> -->
-                <a class="btn btn-dark" [routerLink]="['..','card', card.cardId]">Go to {{ card.cardId }}</a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      <!-- </ng-container> -->
+        <ng-container *ngIf="cards$ | async as cards">
+          <table class="table table-border">
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Link</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let card of cards">
+                <td>{{ card.cardId }}</td>
+                <td>{{ card.name }}</td>
+                <td>
+                  <!-- #1 syntaxe  -->
+                  <!-- <a class="btn btn-dark" routerLink="{{ card.cardId }}">Go to {{ card.cardId }}</a> -->
+                  <!-- #2 syntaxe  -->
+                  <!-- On précice le chemin : parent-parent/card/id -->
+                  <a
+                    class="btn btn-dark"
+                    [routerLink]="['..', 'card', card.cardId]"
+                    >Go to {{ card.cardId }}</a
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </ng-container>
       </div>
-
     </div>
   </div>
 </div>
@@ -38,3 +43,7 @@
 
 <a class="btn btn-dark" routerLink="/card/1">1</a>
 <a class="btn btn-dark" routerLink="/card/2">3</a>
+
+<!-- <div id='card'>
+
+</div> -->

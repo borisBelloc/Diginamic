@@ -8,7 +8,7 @@ export class UppercasePipe implements PipeTransform {
 
   // transform(value: any, ...args: any[]): any {
   transform(value: string, ...args: any[]): string {
-    console.log('Inside PIPE')
+    // console.log('Inside PIPE');
     return value.toUpperCase();
   }
 

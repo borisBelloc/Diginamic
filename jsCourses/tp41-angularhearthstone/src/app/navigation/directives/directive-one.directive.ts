@@ -22,7 +22,7 @@ export class DirectiveOneDirective {
   }
 
   constructor() {
-    console.log('->Constructor of DirectiveOne');
+    // console.log('->Constructor of DirectiveOne');
   }
 
 
