@@ -6,7 +6,7 @@ import { ListComponent } from './list/list.component';
 import { DetailsComponent } from './details/details.component';
 
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // TODO: supprimer HttpClientModule de ce fichier
 @NgModule({
@@ -15,7 +15,8 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     CatalogRoutingModule,
     HttpClientModule,
-    FormsModule
-  ]
+    FormsModule,
+    ReactiveFormsModule
+  ],
 })
 export class CatalogModule { }

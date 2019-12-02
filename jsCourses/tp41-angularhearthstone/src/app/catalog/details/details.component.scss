@@ -1,19 +1,18 @@
-/* VERIF */
-[class*="container"] {
-  // border: 1px solid coral;
-}
-​[class*="row"] {
-  // border: 1px solid red;
-}
-​[class*='col-'] {
-  // border: 1px solid yellow;
-}
+// /* VERIF */
+// [class*="container"] {
+//   // border: 1px solid coral;
+// }
+// ​[class*="row"] {
+//   // border: 1px solid red;
+// }
+// ​[class*='col-'] {
+//   // border: 1px solid yellow;
+// }
 
 
 p {
   color: #ffffff;
 }
-
 
 #card {
   border: 1px #000000 solid;
@@ -21,8 +20,7 @@ p {
   height: 505px;
   width:295px;
   background-color: #ffffff;
-
-
+  height: auto;
 }
 
 #card:hover {
