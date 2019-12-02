@@ -7,8 +7,10 @@
             <h1>{{ card.name }}</h1>
           </div>
           <div class="col-1 px-0 pt-2">
+            <span [className]="isGold ? 'gold' : 'silver'">
             <i class="fas fa-icicles"
             (click)="changeSkin()"></i>
+          </span>
           </div>
         </div>
         <hr />
