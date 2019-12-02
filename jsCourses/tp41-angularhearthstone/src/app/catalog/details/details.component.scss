@@ -1,14 +1,15 @@
-/* VERIF */
+/* ---- VERIf ---- */
 [class*="container"] {
-  // border: 1px solid coral;
-}
-​[class*="row"] {
-  // border: 1px solid red;
-}
-​[class*='col-'] {
-  // border: 1px solid yellow;
+  /* border: 1px solid coral; */
 }
 
+[class*="row"] {
+  /* border: 1px solid red; */
+}
+
+[class*="col-"] {
+  /* border: 1px solid yellow;  */
+}
 
 p {
   color: #ffffff;
