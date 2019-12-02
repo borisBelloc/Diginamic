@@ -2,25 +2,30 @@
   <div class="container">
     <div class="row justify-content-center">
       <div id="card" class="m-5 shadow">
-        <div class="col-12">
-          <h1>{{ card.name }}</h1>
+        <div class="row">
+          <div class="offset-1 col-9">
+            <h1>{{ card.name }}</h1>
+          </div>
+          <div class="col-1 px-0 pt-2">
+            <span [className]="isGold ? 'gold' : 'silver'">
+            <i class="fas fa-icicles fa-lg"
+            (click)="changeSkin()"></i>
+          </span>
+          </div>
         </div>
-        <div class="mb-3 img-fluid">
-          <img src="{{ card.imgGold }}" />
+        <hr />
+
+        <div class="row centerIt">
+            <div *ngIf="card.imgGold && isGold; else silverImg">
+              <img src="{{ card.imgGold }}" />
+            </div>
+            <ng-template #silverImg>
+              <img src="{{ card.img }}" />
+            </ng-template>
         </div>
       </div>
-      <!-- {{ card.cardId }} -->
 
       <br />
     </div>
   </div>
 </ng-container>
-
-<div class="container">
-  <div class="row">
-    <div class="offset-4 col-2">
-    kjkjk
-    </div>
-
-  </div>
-</div>

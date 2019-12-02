@@ -1,29 +1,19 @@
-/* ---- VERIf ---- */
-[class*="container"] {
-  /* border: 1px solid coral; */
-}
-
-[class*="row"] {
-  /* border: 1px solid red; */
-}
-
-[class*="col-"] {
-  /* border: 1px solid yellow;  */
-}
-
 p {
   color: #ffffff;
 }
 
+.centerIt {
+  margin: auto;
+
+}
 
 #card {
   border: 1px #000000 solid;
   border-radius: 25px;
   height: 505px;
-  width:295px;
+  width:300px;
   background-color: #ffffff;
-
-
+  height: auto;
 }
 
 #card:hover {
@@ -47,3 +37,9 @@ p {
   box-shadow: 0 8px 6px -6px black;
 }
 
+.gold i {
+  color: goldenrod !important;
+}
+.silver i {
+  color: silver !important;
+}
