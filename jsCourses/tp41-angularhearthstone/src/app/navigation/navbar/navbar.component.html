@@ -4,9 +4,13 @@ class="shadow-lg navbar navbar-expand-sm navbar-dark bg-dark"
 (mouseenter)="isCollapsed = false"
 (mouseleave)="isCollapsed = true"
 >
-  <a class="navbar-brand" href="#">
+
+<!-- routerLink="/cards"> -->
+<!-- [routerLink]="['cards']"> -->
+<a class="navbar-brand" href="/cards">
     <img [attr.src]="logo"/>
   </a>
+
   <button class="navbar-toggler" type="button"
   (click)="isCollapsed = !isCollapsed"
   >
@@ -18,9 +22,9 @@ class="shadow-lg navbar navbar-expand-sm navbar-dark bg-dark"
   id="navbarSupportedContent">
     <ul class="offset-3 offset-md-6 offset-lg-8 navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">{{ title + ' premium' | uppercase }} Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/cards">{{ title + ' premium' | uppercase }} <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link" href="#">Link</a>
       </li>
       <li class="nav-item dropdown">
@@ -33,7 +37,7 @@ class="shadow-lg navbar navbar-expand-sm navbar-dark bg-dark"
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
-      </li>
+      </li> -->
     </ul>
   </div>
 
