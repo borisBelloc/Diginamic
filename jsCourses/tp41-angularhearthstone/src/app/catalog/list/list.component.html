@@ -6,12 +6,14 @@
   <div class="row">
     <div class="col-12" *ngIf="info$ | async as info">
       <form #monForm="ngForm" (ngSubmit)="submit(monForm)">
-        <input [(ngModel)]="query"
+        <input
+          [(ngModel)]="query"
           type="search"
           class="form-control"
           required
           minlength="3"
-          name="queryControl"/>
+          name="queryControl"
+        />
         <!-- N'affiche les erreures que lorsque le form est submitted -->
         <!-- utiliser pipe pour afficher le json : {{ minlength | json }} -->
         <ng-container *ngIf="monForm.submitted">
@@ -85,11 +87,11 @@
                 <td>{{ card.name }}</td>
 
                 <td *ngIf="card.img; else noImg">
-                    <i class="fas fa-images"></i>
-                  </td>
-                  <ng-template #noImg>
-                    <td>
-                        <i class="fas fa-times"></i>
+                  <i class="fas fa-images"></i>
+                </td>
+                <ng-template #noImg>
+                  <td>
+                    <i class="fas fa-times"></i>
                   </td>
                 </ng-template>
                 <td>
