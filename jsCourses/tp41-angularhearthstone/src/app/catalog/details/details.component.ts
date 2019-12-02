@@ -13,6 +13,7 @@ import { CardInterface } from '../interface/card.interface';
 export class DetailsComponent implements OnInit {
 
   card$: Observable<CardInterface>;
+  isGold = true;
 
   constructor(
     // Injection
@@ -40,4 +41,9 @@ export class DetailsComponent implements OnInit {
     );
 
   }
+
+  changeSkin() {
+    this.isGold = !this.isGold;
+  }
+
 }

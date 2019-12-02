@@ -7,15 +7,16 @@
             <h1>{{ card.name }}</h1>
           </div>
           <div class="col-1 px-0 pt-2">
-            <i class="fas fa-icicles"></i>
+            <i class="fas fa-icicles"
+            (click)="changeSkin()"></i>
           </div>
         </div>
         <hr />
 
         <div class="row centerIt">
-            <div *ngIf="card.imgGold; else silverImg">
+            <div *ngIf="card.imgGold && isGold; else silverImg">
               <img src="{{ card.imgGold }}" />
-            </div>>
+            </div>
             <ng-template #silverImg>
               <img src="{{ card.img }}" />
             </ng-template>
