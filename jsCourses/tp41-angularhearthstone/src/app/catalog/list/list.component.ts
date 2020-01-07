@@ -23,7 +23,7 @@ export class ListComponent implements OnInit {
   query: string;
 
   filterForm = new FormGroup({
-    set: new FormControl('Basic', [Validators.required]),
+    set: new FormControl('Classic', [Validators.required]),
     classe: new FormControl('Druid', [Validators.required]),
   });
 

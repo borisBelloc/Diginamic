@@ -16,9 +16,9 @@ export class NavbardisplayService {
     this.isDisplay$.next(!this.isDisplay$.value);
   }
 
-    onChangeDisplay(): Observable<boolean> {
-      return this.isDisplay$.pipe (
-        distinctUntilChanged()
-      );
+  onChangeDisplay(): Observable<boolean> {
+    return this.isDisplay$.pipe(
+      distinctUntilChanged()
+    );
   }
 }
