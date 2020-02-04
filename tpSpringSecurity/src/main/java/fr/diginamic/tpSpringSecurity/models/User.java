@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 //@Entity(name = "Tag") // "from Tag" plutôt que "from User" <- exemple pour mettre un nom d'entité different
@@ -85,6 +86,11 @@ public class User {
 		this.lastName = lastName;
 		this.email = email;
 	}
+	
+	// un user a un role et un role contient des droits (voir model Role)
+	@ManyToOne
+	private Role role;
+	
 
 	
 	
