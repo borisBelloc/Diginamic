@@ -78,14 +78,16 @@ public class User {
 	public User() {
 	}
 
-	public User(String nickname, String password, String firstName, String lastName, String email) {
+	public User(String nickname, String password, String firstName, String lastName, String email, Role role) {
 		super();
 		this.nickname = nickname;
 		this.password = password;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
+		this.role = role;
 	}
+	
 	
 	// un user a un role et un role contient des droits (voir model Role)
 	@ManyToOne

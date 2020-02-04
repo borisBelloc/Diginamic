@@ -1,5 +1,6 @@
 package fr.diginamic.tpSpringSecurity.models;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.Column;
@@ -46,6 +47,25 @@ public class Role {
 				joinColumns = @JoinColumn(name = "role_id"),
 				inverseJoinColumns = @JoinColumn(name = "right_id"))
 	private Set<Right> rights;
+	
+	
+//	-------
+	public Set<Right> getRights() {
+		return rights;
+	}
+	
+	
+public void addRight(Right right) {
+	if (rights == null) {
+		rights = new HashSet<>();
+	}
+	rights.add(right);
+}
+	
+	
+	
+	
+	
 	
 	
 	

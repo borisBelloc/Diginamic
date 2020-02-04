@@ -38,17 +38,25 @@ public class InitializeData {
 		
 		// Role Creation
 		Role admin = new Role("ADMIN");
+		admin.addRight(readUsers);
+		admin.addRight(createUsers);
+		admin.addRight(deleteUsers);
+		
 		Role moderator = new Role("MODERATOR");
+		moderator.addRight(readUsers);
+		moderator.addRight(createUsers);
+		
 		Role user = new Role("USER");
+		moderator.addRight(readUsers);
 		
 		roleRepository.save(admin);
 		roleRepository.save(moderator);
 		roleRepository.save(user);
 		
 		// User Creation
-		User adminUser = new User("admin", "password", "Jean-Luc", "Adminne", "jl.admine@gmail.com");
-		User modoUser = new User("modo", "password", "Paul", "Alto", "palto@gmail.com");
-		User userClassicUser = new User("user", "password", "Alexis", "Baton", "baton@gmail.com");
+		User adminUser = new User("admin", "password", "Jean-Luc", "Adminne", "jl.admine@gmail.com", admin);
+		User modoUser = new User("modo", "password", "Paul", "Alto", "palto@gmail.com", moderator);
+		User userClassicUser = new User("user", "password", "Alexis", "Baton", "baton@gmail.com", user);
 		
 		userRepository.save(adminUser);
 		userRepository.save(modoUser);
