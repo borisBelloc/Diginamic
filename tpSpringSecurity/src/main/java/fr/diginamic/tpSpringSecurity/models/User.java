@@ -92,6 +92,14 @@ public class User {
 	// un user a un role et un role contient des droits (voir model Role)
 	@ManyToOne
 	private Role role;
+
+	public Role getRole() {
+		return role;
+	}
+
+	public void setRole(Role role) {
+		this.role = role;
+	}
 	
 
 	
