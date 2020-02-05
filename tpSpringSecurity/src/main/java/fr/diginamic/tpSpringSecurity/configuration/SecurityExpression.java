@@ -13,8 +13,6 @@ import fr.diginamic.tpSpringSecurity.service.UserService;
 
 /**
  * VERIFIE QUE L'utilisateur connecté ai le droit de modifier le password
- * @author formation
- *
  */
 
 @Service

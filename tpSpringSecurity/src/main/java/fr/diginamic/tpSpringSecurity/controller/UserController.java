@@ -1,5 +1,6 @@
 package fr.diginamic.tpSpringSecurity.controller;
 
+import java.security.Principal;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -57,10 +58,14 @@ public class UserController {
 	 * Verifie que le changement de mot de passe est effectué par un Admin ou pas le possesseur du compte  
 	 */
 	@PutMapping("/{id}/password")
-	@PreAuthorize("hasRole('ADMIN') or @securityExpression.isConnectedUser(#id, principal)")
-	public void changePassword(@PathVariable Long id, @RequestParam String password) throws NotFoundException {
+	@PreAuthorize("hasRole('ADMIN') or @securityExpression.isConnectedUser(#id, #principal)")
+	public void changePassword(@PathVariable Long id, @RequestParam String password, Principal principal) throws NotFoundException {
 		userService.changePassword(id, password);
 	}
 	
-
+//	Request to change password
+	
+	// ? -> @RequestParam
+	// Si 2 @RequestParam  -> ?xxxx=yyyy&uuuu=zzzz
+	// localhost:8080/api/users/2/password?password=coucou
 }
