@@ -2,9 +2,8 @@ package fr.diginamic.tpSpringSecurity.configuration;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.context.event.EventListener;
-
+import org.springframework.stereotype.Component;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -17,7 +16,7 @@ import fr.diginamic.tpSpringSecurity.repository.RoleJpaRepository;
 import fr.diginamic.tpSpringSecurity.service.UserService;
 
 
-@Configuration
+@Component
 public class InitializeData {
 	
 	private static final Logger LOG = LoggerFactory.getLogger(InitializeData.class);
@@ -62,7 +61,7 @@ public class InitializeData {
 		// Users creation
 		User adminUser = new User("admin", "password", "Jean-Luc", "Adminne", "jl.adminne@ss.de", admin);
 		User moderatorUser = new User("moderator", "password", "Jean-Luc", "Modeau", "jl.modeau@ss.de", moderator);
-		User standardUser = new User("admin", "password", "Jean-Luc", "Illouzeurt", "jl.illouzeurt@ss.de", user);
+		User standardUser = new User("user", "password", "Jean-Luc", "Illouzeurt", "jl.illouzeurt@ss.de", user);
 
 		try {
 			userService.create(adminUser);
