@@ -1,20 +1,28 @@
 // Diapo 98
 //class User( private val name: String, private val age: Int, private var email: String? = null )
 
-// Diapo 101
-class User (private var name: String) {
+// diapo 108
+private class User (val nickName: String) {
 
-    var address: String = "unspecified"
-    var name: String = ""
-        set(value) {
-            println("adress was changed for $name: $field -> $value")
-            field = value
+    companion object {
+//        fun newSubscribingUser(email: String) : User {
+//            val pseudo = email.substringBefore('@')
+//            return User(pseudo)
+//        }
+
+        // kotlin like
+        fun newSubscribingUser(email: String) = User(email.substringBefore('@'))
+
+        fun newFacebookUser(accountId: Int) : User {
+            return User("fb:$accountId")
         }
-
-
-
+    }
 }
 
-fun main (args: Array<String>) {
+fun main() {
+    val subscribedUser = User.newSubscribingUser("bob@gmail.com")
+    val fbUser = User.newFacebookUser(4)
 
+    println(subscribedUser.nickName)
+    println(fbUser.nickName)
 }
