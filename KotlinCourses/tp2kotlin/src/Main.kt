@@ -19,7 +19,6 @@ fun <T> MutableList<T>.swap( firstIndex: int, secondIndex: int) {
     this[firstIndex] = this[secondIndex]
     this[secondIndex] = tmp
 }
-
 // Diapo 76
 //fun hasAZ( hasA: (Int) -> Unit, hasZ: (Int) -> Unit ) {
 //}
@@ -32,12 +31,9 @@ fun String.hasAZ( hasA: (Int) -> Unit, hasZ: (Int) -> Unit ) {
     if ( nbZ > 0 ) hasZ(nbZ)
 }
 
-
 fun main() {
-
     // diapo 76
     val str = "azerty"
-
     str.hasAZ(
         { nbA -> println("il y a $nbA a") },
         { nbZ -> println("il y a $nbZ z") }
