@@ -1,0 +1,60 @@
+// Retourner un ensemble de clients
+// fun Shop.getSetOfCustomers(): Set<Customer>                    = customers.toSet()
+
+// Retourner l'ensemble des villes d'où proviennent les clients
+// fun Shop.getCitiesCustomersAreFrom(): Set<City>                =
+
+// Retourner une liste des clients qui vivent dans la ville donnée des villes d'où proviennent les clients
+//fun Shop.getCustomersFrom(city: City): List<Customer>
+
+// Retourner vrai si tous les clients viennent de la ville donnée
+//fun Shop.checkAllCustomersAreFrom(city: City): Boolean
+
+// Retourner true s'il y a au moins un client de la ville donnée
+//fun Shop.hasCustomerFrom(city: City): Boolean
+
+// Retourner le nombre de clients de la ville donnée
+//fun Shop.countCustomersFrom(city: City): Int
+
+// Retourner un client qui habite dans la ville donnée, ou null s'il n'y en a pas
+//fun Shop.findAnyCustomerFrom(city: City): Customer?
+
+// Retourner tous les produits que ce client a commandés
+//val Customer.orderedProducts: Set<Product> get() {}
+
+// Retourner tous les produits commandés par au moins un client
+//val Shop.allOrderedProducts: Set<Product> get(){}
+
+// Retourner un client dont le nombre de commandes est le plus élevé parmi tous les clients
+//fun Shop.getCustomerWithMaximumNumberOfOrders(): Customer?
+
+// Retourner le produit le plus cher qui a été commandé
+//fun Customer.getMostExpensiveOrderedProduct(): Product?
+
+// Retourner une liste de clients, triés par le nombre croissant de commandes qu'ils ont passées
+//fun Shop.getCustomersSortedByNumberOfOrders(): List<Customer>
+
+// Retourner la somme des prix de tous les produits commandés par un client.
+// Remarque: le client peut commander plusieurs fois le même produit.
+//fun Customer.getTotalOrderPrice(): Double
+
+// Retourner une map des clients vivant dans chaque ville
+//fun Shop.groupCustomersByCity(): Map<City, List<Customer>>
+
+
+// Retourner les clients qui ont plus de commandes non livrées que livrées
+//fun Shop.getCustomersWithMoreUndeliveredOrdersThanDelivered(): Set<Customer>
+
+
+// Retourner l'ensemble des produits commandés par chaque client
+//fun Shop.getSetOfProductsOrderedByEveryCustomer(): Set<Product>
+
+// Retourner le produit le plus cher parmi tous les produits livrés (utilisez l'indicateur Order.isDelivered)
+//fun Customer.getMostExpensiveDeliveredProduct(): Product?
+
+// Retourner une liste des produits commandés par un client
+//fun Customer.getOrderedProductsList(): List<Product>
+
+// Retourner combien de fois le produit donné a été commandé.
+// Remarque: un client peut commander plusieurs fois le même produit.
+//fun Shop.getNumberOfTimesProductWasOrdered(product: Product): Int
