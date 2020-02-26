@@ -2,6 +2,7 @@
 DigiMagic/.git
 CinemaBB/.git
 # javaCourses/.metadata/*
+*/.idea/
 
 
 .metadata
