@@ -18,6 +18,9 @@
         android:textColor="#ffffff"
         android:textSize="20sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="RtlSymmetry" />
 
     <ImageView
@@ -26,36 +29,38 @@
         android:layout_height="145dp"
         android:scaleType="centerCrop"
         android:src="@drawable/montrealskyline"
-        tools:layout_editor_absoluteY="57dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="86dp"
         android:layout_height="35dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="11dp"
+        android:layout_marginTop="8dp"
         android:text="Montreal"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textViewDescriptionCity"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintHorizontal_bias="0.003"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textViewDescriptionCity"
         android:layout_width="360dp"
         android:layout_height="329dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginBottom="144dp"
         android:text="Montréal est la plus importante ville du Québec et la deuxième ville la plus peuplée du Canada, après Toronto et avant Vancouver.\n\nElle se situe principalement sur l’île fluviale de Montréal, sur le fleuve Saint-Laurent (entre Québec et le lac Ontario) dans le Sud du Québec, dont elle est la métropole. \nEn 2016, la ville comptait 1 704 694 habitants1 et son aire urbaine (appelée Région métropolitaine de Montréal) plus de 4 millions, soit environ la moitié de la population du Québec.\n\nMontréal est ainsi la 19e agglomération la plus peuplée d'Amérique du Nord et la 122e ville la plus peuplée du monde. \nVille francophone la plus peuplée d'Amérique, Montréal est considérée comme ayant la deuxième population francophone au monde après Paris."
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.125" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/buttonDiscard"
