@@ -25,17 +25,18 @@ class MainActivity : AppCompatActivity() {
 //    myRecycler.adapter = MovieAdapter(listMovies)
 
     val listContact = mutableListOf<Contact>()
-        listContact.add(Contact("Justin Trudeau", 1985, "c:/todo", true))
-        listContact.add(Contact("Alex", 1988, "c:/todo", true))
-        listContact.add(Contact("Alice", 2003, "c:/todo", false))
-        listContact.add(Contact("Emilie", 1986, "c:/todo", true))
-        listContact.add(Contact("Pierrot", 1985, "c:/todo", true))
-        listContact.add(Contact("Emilie", 1986, "c:/todo", false))
-        listContact.add(Contact("Pédro", 1986, "c:/todo", false))
-        listContact.add(Contact("Boris", 1986, "c:/todo", true))
+        listContact.add(Contact("Justin Trudeau", 1985, R.drawable.avatar, true))
+        listContact.add(Contact("Alex", 1988, R.drawable.avatar, true))
+        listContact.add(Contact("Alice", 2003, R.drawable.avatar, false))
+        listContact.add(Contact("Emilie", 1986, R.drawable.avatar, true))
+        listContact.add(Contact("Pierrot", 1985, R.drawable.avatar, true))
+        listContact.add(Contact("Emilie", 1986, R.drawable.avatar, false))
+        listContact.add(Contact("Pédro", 1986, R.drawable.avatar, false))
+        listContact.add(Contact("Boris", 1986, R.drawable.avatar, true))
 
     myRecycler.layoutManager = LinearLayoutManager(this)
     myRecycler.adapter = ContactAdapter(listContact)
+
 
 
 

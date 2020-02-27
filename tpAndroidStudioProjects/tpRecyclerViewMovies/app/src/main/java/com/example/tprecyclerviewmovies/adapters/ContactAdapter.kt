@@ -2,6 +2,7 @@ package com.example.tprecyclerviewmovies.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tprecyclerviewmovies.R
 import com.example.tprecyclerviewmovies.models.Contact
@@ -32,8 +33,9 @@ class ContactViewHolder(inflater: LayoutInflater, parent: ViewGroup)
     fun bind(contact: Contact) {
         itemView.apply {
             textName.text = contact.name
-            textBirthDate.text = contact.birthDate.toString()
-//            imgAvatar.text = contact.avatar
+            textAge.text = contact.age.toString()
+            imgAvatar.setImageDrawable(
+                ContextCompat.getDrawable(itemView.context, contact.avatar))
 //            viewIsValid.text = contact.isValid
         }
     }

@@ -2,10 +2,17 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="horizontal">
 
+    <ImageView
+        android:id="@+id/imgAvatar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center"
+        tools:background="#f46532" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -16,18 +23,12 @@
         />
 
     <TextView
+        android:id="@+id/textAge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="1985"
-        android:id="@+id/textBirthDate"
-        />
+        tools:text="1985" />
 
-    <ImageView
-        android:id="@+id/imgAvatar"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignParentRight="true"
-        tools:background="#f46532" />
+
 
     <View
         android:id="@+id/viewIsValid"
