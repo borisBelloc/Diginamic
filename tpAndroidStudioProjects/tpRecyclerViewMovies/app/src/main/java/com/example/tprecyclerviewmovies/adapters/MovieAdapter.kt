@@ -1,14 +1,14 @@
 package com.example.tprecyclerviewmovies.adapters
 
-import android.text.Layout
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tprecyclerviewmovies.R
+import com.example.tprecyclerviewmovies.models.Contact
 import com.example.tprecyclerviewmovies.models.Movie
 import kotlinx.android.synthetic.main.item_movie.view.*
 
-class MovieAdapter(val movies: List<Movie>) : RecyclerView.Adapter<MovieViewHolder>() {
+class MovieAdapter(val movies: MutableList<Movie>) : RecyclerView.Adapter<MovieViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder {
         val inflater = LayoutInflater.from(parent.context)
