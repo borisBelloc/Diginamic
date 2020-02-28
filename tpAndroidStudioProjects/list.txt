@@ -1,0 +1,12 @@
+1/ myFirstApp ->
+ 
+2/ tpFragment -> utilisation de fragments et affichage de ceux-ci
+
+3/ tpRecyclerViewMovies -> Affichage d'une liste de contact via Adapter et viewRecycler (lazy loading)
+
+4/ tpApi -> Utilisation api pour utiliser http
+- utilisation framework RETROFIT : https://square.github.io/retrofit/ (fichier -< build.gradle )
+- utilisation GSON
+- Json to Kotlin -> file -> setting "kotlin json" 
+- JAVA 8  build.gradle -> compileOptions { sourceCompatibility JavaVersion.VERSION_1_8 targetCompatibility JavaVersion.VERSION_1_8 }
+- Picasso dans build gradle : implementation 'com.squareup.picasso:picasso:2.71828'
