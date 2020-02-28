@@ -31,6 +31,8 @@ class ContactViewHolder(inflater: LayoutInflater, parent: ViewGroup)
 )
 {
     fun bind(contact: Contact) {
+
+//        TODO: mettre fonction pour colorer case en fonction de isValid, dans bind.
         itemView.apply {
             textName.text = contact.name
             textAge.text = contact.age.toString()
