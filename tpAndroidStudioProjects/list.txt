@@ -10,3 +10,6 @@
 - Json to Kotlin -> file -> setting "kotlin json" 
 - JAVA 8  build.gradle -> compileOptions { sourceCompatibility JavaVersion.VERSION_1_8 targetCompatibility JavaVersion.VERSION_1_8 }
 - Picasso dans build gradle : implementation 'com.squareup.picasso:picasso:2.71828'
+
+5/ Tpbdd -> utilisation sqlite
+- Room persistance Library : https://developer.android.com/topic/libraries/architecture/room
