@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
                     val questions = response.body()
 //                    Toutes les questions LOG :
                     questions?.items?.forEach {Log.i("StackService", "questions : $it ")}
+//                    DOC : Utilisation de l'adapter
                     if (questions != null) {
                         myRecycler.adapter = QuestionAdapter(questions.items)
                     }

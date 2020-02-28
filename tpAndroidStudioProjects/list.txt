@@ -2,7 +2,7 @@
  
 2/ tpFragment -> utilisation de fragments et affichage de ceux-ci
 
-3/ tpRecyclerViewMovies -> Affichage d'une liste de contact via Adapter et viewRecycler (lazy loading)
+3/ tpRecyclerViewMovies -> ADAPTER ->  Affichage d'une liste de contact via Adapter et viewRecycler (lazy loading)
 
 4/ tpApi -> Utilisation api pour utiliser http
 - utilisation framework RETROFIT : https://square.github.io/retrofit/ (fichier -< build.gradle )
