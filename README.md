@@ -22,6 +22,11 @@ Folder:
       - commons : Maven : just a function to check if a String is null or empty
   - javaCourses : Java : tp from Java imperatif, POO, Java 8 specifiticies
   
+  **tpAndroidStudioProjects :** Tp from Kotlin/Android studio courses
+  
+  
+  
+  
   
   
 
